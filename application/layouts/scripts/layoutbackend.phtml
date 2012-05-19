@@ -1,0 +1,411 @@
+<?php
+	/**
+	 * Default Layout
+	 *
+	 * @category   Projet
+	 * @package    modules_main
+	 * @subpackage layouts
+	 */
+
+	/**
+	 * Initialisation du doctype reçu de la configuration principale
+	 * dans le Bootstrap.
+	 *
+	 * @see application/Bootstrap.php -> _initView()
+	 */
+	echo $this->doctype();
+	
+	$oIdent = Zend_Auth::getInstance()->getIdentity();
+	
+	/**
+	 * Balise d'ouverture HTML avec spécification compatible FR.
+	 */
+	
+	// Get apache version
+	function apache_version() {
+		if (function_exists('apache_get_version')) {
+			if (preg_match('|Apache\/(\d+)\.(\d+)\.(\d+)|', apache_version(), $version)) {
+				return $version[1] . '.' . $version[2] . '.' . $version[3];
+			}
+		} elseif (isset($_SERVER['SERVER_SOFTWARE'])) {
+			if (preg_match('|Apache\/(\d+)\.(\d+)\.(\d+)|', $_SERVER['SERVER_SOFTWARE'], $version)) {
+				return $version[1] . '.' . $version[2] . '.' . $version[3];
+			}
+		}
+		
+		return '(inconnu)';
+	}
+
+	/**
+	 * En-tête de page
+	 */
+?>
+
+<html lang="fr">
+
+<head>
+
+	<?php
+		/**
+		 * Initialisation des balises d'entête reçu de la configuration
+		 * principale dans le Bootstrap.
+		 *
+		 * @see application/Bootstrap.php -> _initView()
+		 */
+		echo $this->jQuery();
+		echo $this->headMeta();
+		echo $this->headTitle();
+//		echo $this->headLink();
+		echo $this->headStyle();
+		echo $this->headScript();
+	?>
+	<link href="<?php echo $this->baseUrl()."/gabarit/styles/backend/"?>mini.php?files=reset,common,form,standard,960.gs.fluid,simple-lists,block-lists,planning,table,special-pages,calendars,wizard,gallery" rel="stylesheet" type="text/css">
+	<link href="<?php echo $this->baseUrl()."/gabarit/styles/"?>backend.css" rel="stylesheet" type="text/css">
+
+	<!--[if lte IE 8]><script type="text/javascript" src="<?php echo $this->baseUrl()."/gabarit/scripts/backend/"?>standard.ie.js"></script><![endif]-->
+
+<!-- Charts library -->
+<!--Load the AJAX API-->
+<!--	<script type="text/javascript" src="http://www.google.com/jsapi"></script>-->
+	<script type="text/javascript">
+	
+		// Load the Visualization API and the piechart package.
+		google.load('visualization', '1', {'packages':['corechart']});
+		
+	</script>
+
+	<style type="text/css">
+		a {
+			color: #3399CC;
+		}
+	</style>
+	
+	<?php
+		/**
+		 * Le logo de l'application est positionné dans cette balise.
+		 * Il sert également de redirection vers l'accueil de l'application.
+		 *
+		 * @brief Logo de l'application
+		 */
+	?>
+<!--	<span><a href='<?php //echo $this->baseUrl(). "/fr/"?>' id="logo" title="Retour Accueil"></a></span>-->
+
+</head>
+
+<?php
+	/**
+	 * Corps de la page
+	 */
+?>
+	<body style="width: 100%">
+		<!-- The template uses conditional comments to add wrappers div for ie8 and ie7 - just add .ie or .ie7 prefix to your css selectors when needed -->
+		<!--[if lt IE 9]><div class="ie"><![endif]-->
+		<!--[if lt IE 8]><div class="ie7"><![endif]-->
+		
+		<!-- Header -->
+		
+		<!-- Server status -->
+		<header>
+		<div class="container_12">
+		
+		<?php
+			/**
+			 * Le numéro de l'écran est affiché ici à des fins d'identification
+			 * par l'utilisateur test.
+			 * La version logicielle s'affiche également à la suite.
+			 * Ce numéro est voué à disparaître pour la mise en production.
+			 *
+			 * @brief Numéro de l'écran en cours et Version logicielle
+			 * @see application/Bootstrap.php
+			 */
+		?>
+		<p id="skin-name">
+			<small>
+				Administration
+			</small>
+		</p>
+		<div class="server-info">
+			Version:
+			<strong>
+				<?php
+					if (Zend_Registry::isRegistered('version')) {
+						if (is_numeric((integer) Zend_Registry::get('version'))) {
+							echo Zend_Registry::get('version');
+						} else {
+							echo Zend_Registry::get('version');
+						}
+					}
+				?>
+			</strong>
+		</div>
+		<div class="server-info">Ecran: <strong><?php echo $this->placeholder('numecran'); ?></strong></div>
+		<div class="server-info">Serveur: <strong>Apache <?php echo apache_version(); ?></strong></div>
+		<div class="server-info">Php: <strong><?php echo phpversion(); ?></strong></div>
+		
+		</div>
+		</header>
+		<!-- End server status -->
+		
+		<!-- Main nav -->
+		<nav id="main-nav">
+		
+		<ul class="container_12">
+			<li class="home"><a href="bkstatut" title="Accueil">Accueil</a>
+			<ul>
+				<li class="current"><a href="#" title="Bureau">Bureau</a></li>
+				<li><a href="#" title="Mon profil">Mon profil</a></li>
+				<li class="with-menu"><a href="#" title="Mes préférences">Mes préférences</a>
+				<div class="menu"><img src="<?php echo $this->baseUrl()."/gabarit/images/backend/"?>menu-open-arrow.png" width="16"
+					height="16">
+				<ul>
+					<li class="icon_address"><a href="#">Parcourir par</a>
+					<ul>
+						<li class="icon_blog"><a href="#">Blog</a>
+						<ul>
+							<li class="icon_alarm"><a href="#">Récents</a>
+							<ul>
+								<li class="icon_building"><a href="#">Blog d'Entreprise</a></li>
+								<li class="icon_newspaper"><a href="#">Blog de Presse</a></li>
+							</ul>
+							</li>
+							<li class="icon_building"><a href="#">Blog d'Entreprise</a></li>
+							<li class="icon_computer"><a href="#">Blog d'assistance</a></li>
+							<li class="icon_search"><a href="#">Recherche...</a></li>
+						</ul>
+						</li>
+						<li class="icon_server"><a href="#">Site Web</a></li>
+						<li class="icon_network"><a href="#">Domaine</a></li>
+					</ul>
+					</li>
+					<li class="icon_export"><a href="#">Exporter</a>
+					<ul>
+						<li class="icon_doc_excel"><a href="#">Excel</a></li>
+						<li class="icon_doc_csv"><a href="#">CSV</a></li>
+						<li class="icon_doc_pdf"><a href="#">PDF</a></li>
+						<li class="icon_doc_image"><a href="#">Image</a></li>
+						<li class="icon_doc_web"><a href="#">Html</a></li>
+					</ul>
+					</li>
+					<li class="sep"></li>
+					<li class="icon_refresh"><a href="#">Recharger</a></li>
+					<li class="icon_reset">Réinitialiser</li>
+					<li class="icon_search"><a href="#">Rechercher</a></li>
+					<li class="sep"></li>
+					<li class="icon_terminal"><a href="#">Requête personnalisée</a></li>
+					<li class="icon_battery"><a href="#">Stats de serveur</a></li>
+				</ul>
+				</div>
+				</li>
+			</ul>
+			</li>
+			<li class="write"><a href="bkstatut" title="Modification">Modification</a>
+			<ul>
+				<li><a href="bkarticle" title="Ajouter un article">Ajouter un article</a></li>
+				<li><a href="bkedition" title="Profils">Profils</a></li>
+				<li><a href="bkoffre" title="Offre d'emploi">Offre d'emploi</a></li>
+			</ul>
+			</li>
+			<li class="comments"><a href="bkcourrier" title="Messagerie">Messagerie</a>
+			<ul>
+				<li><a href="#" title="Gerer">Gérer</a></li>
+				<li><a href="#" title="Spams">Spams</a></li>
+			</ul>
+			</li>
+			<li class="medias"><a href="bkmedias" title="Fichier">Fichier</a>
+			<ul>
+				<li><a href="#" title="Parcourir">Parcourir</a></li>
+				<li><a href="#" title="Ajouter un fichier">Ajouter un fichier</a></li>
+				<li><a href="#" title="Gerer">Gérer</a></li>
+				<li><a href="#" title="Preferences">Préférences</a></li>
+			</ul>
+			</li>
+			<li class="users"><a href="bkusers" title="Utilisateurs">Utilisateurs</a>
+			<ul>
+				<li><a href="#" title="Liste">Liste</a></li>
+				<li><a href="#" title="Ajouter un utilisateur">Ajouter un utilisateur</a></li>
+				<li><a href="#" title="Preferences">Préférences</a></li>
+			</ul>
+			</li>
+			<li class="stats"><a href="bkstats" title="Statistiques">Statistiques</a></li>
+			<li class="settings"><a href="bksettings" title="Preferences">Préférences</a></li>
+			<li class="backup"><a href="bkbackup" title="Sauvegarde">Sauvegarde</a></li>
+		</ul>
+		</nav>
+		<!-- End main nav -->
+		
+		<!-- Sub nav -->
+		<div id="sub-nav">
+		<div class="container_12"><a href="bkaide" title="Aide" class="nav-button"><b>Aide</b></a>
+		
+		<form id="search-form" name="search-form" method="post"
+			action="search.php"><input type="text" name="s" id="s" value=""
+			title="Recherche..." autocomplete="on"></form>
+		
+		</div>
+		</div>
+		<!-- End sub nav -->
+		
+		<!-- Status bar -->
+		<div id="status-bar">
+		<div class="container_12">
+		
+		<ul id="status-infos">
+			<li class="spaced">Identifié comme:
+				<strong><?php if ($oIdent['ID_UTILISATEUR']) {
+							  	echo $oIdent['PROFIL']." - ".$oIdent['MAIL1'];
+							  } else {
+							  	echo "INVITE";
+							  }
+						?>
+				</strong>
+			</li>
+<!--			<li><a href="#" class="button" title="5 messages"><img-->
+<!--				src="<?php echo $this->baseUrl()."/gabarit/images/backend/"?>icons/fugue/mail.png" width="16" height="16"> <strong>5</strong></a>-->
+<!--			<div id="messages-list" class="result-block"><span class="arrow"><span></span></span>-->
+<!--		-->
+<!--			<ul class="small-files-list icon-mail">-->
+<!--				<li><a href="#"><strong>10:15</strong> Veuiller mettre à jour...<br>-->
+<!--				<small>De: Système</small></a></li>-->
+<!--				<li><a href="#"><strong>Hier</strong> Salut<br>-->
+<!--				<small>De: Jane</small></a></li>-->
+<!--				<li><a href="#"><strong>Hier</strong> System update<br>-->
+<!--				<small>De: Système</small></a></li>-->
+<!--				<li><a href="#"><strong>2 jours</strong> Database backup<br>-->
+<!--				<small>De: Système</small></a></li>-->
+<!--				<li><a href="#"><strong>2 jours</strong> Re: rapport de bugs<br>-->
+<!--				<small>De: Max</small></a></li>-->
+<!--			</ul>-->
+		
+<!--			<p id="messages-info" class="result-info"><a href="#">Boîte de réception-->
+<!--			&raquo;</a></p>-->
+<!--			</div>-->
+<!--			</li>-->
+<!--			<li><a href="#" class="button" title="25 comments"><img-->
+<!--				src="<?php echo $this->baseUrl()."/gabarit/images/backend/"?>icons/fugue/balloon.png" width="16" height="16"> <strong>25</strong></a>-->
+<!--			<div id="comments-list" class="result-block"><span class="arrow"><span></span></span>-->
+<!--		-->
+<!--			<ul class="small-files-list icon-comment">-->
+<!--				<li><a href="#"><strong>Jane</strong>: I don't think so<br>-->
+<!--				<small>On <strong>Post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Ken_54</strong>: What about using a-->
+<!--				different...<br>-->
+<!--				<small>On <strong>Post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Jane</strong> Sure, but no more.<br>-->
+<!--				<small>On <strong>Another post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Max</strong>: Have you seen that...<br>-->
+<!--				<small>On <strong>Post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Anonymous</strong>: Good luck!<br>-->
+<!--				<small>On <strong>My first post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Sébastien</strong>: This sure rocks!<br>-->
+<!--				<small>On <strong>Another post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>John</strong>: Me too!<br>-->
+<!--				<small>On <strong>Third post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>John</strong> This can be solved by...<br>-->
+<!--				<small>On <strong>Another post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Jane</strong>: No prob.<br>-->
+<!--				<small>On <strong>Post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Anonymous</strong>: I had the following...<br>-->
+<!--				<small>On <strong>My first post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Anonymous</strong>: Yes<br>-->
+<!--				<small>On <strong>Post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Lian</strong>: Please make sure that...<br>-->
+<!--				<small>On <strong>Last post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Ann</strong> Thanks!<br>-->
+<!--				<small>On <strong>Last post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Max</strong>: Don't tell me what...<br>-->
+<!--				<small>On <strong>Post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Gordon</strong>: Here is an article about...<br>-->
+<!--				<small>On <strong>My another post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Lee</strong>: Try to reset the value first<br>-->
+<!--				<small>On <strong>Last title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Lee</strong>: Sure!<br>-->
+<!--				<small>On <strong>Second post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Many</strong> Great job, keep on!<br>-->
+<!--				<small>On <strong>Third post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>John</strong>: I really like this<br>-->
+<!--				<small>On <strong>First title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Paul</strong>: Hello, I have an issue with...<br>-->
+<!--				<small>On <strong>My first post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>June</strong>: Yuck.<br>-->
+<!--				<small>On <strong>Another title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Jane</strong>: Wow, sounds amazing, do...<br>-->
+<!--				<small>On <strong>Another title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Esther</strong>: Man, this is the best...<br>-->
+<!--				<small>On <strong>Another post</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>Max</strong>: Thanks!<br>-->
+<!--				<small>On <strong>Post title</strong></small></a></li>-->
+<!--				<li><a href="#"><strong>John</strong>: I'd say it is not safe...<br>-->
+<!--				<small>On <strong>My first post</strong></small></a></li>-->
+<!--			</ul>-->
+<!--		-->
+<!--			<p id="comments-info" class="result-info"><a href="#">Gérer commentaires-->
+<!--			&raquo;</a></p>-->
+<!--			</div>-->
+<!--			</li>-->
+			<li><a href="bklogin" class="button red" title="Déconnexion"><span
+				class="smaller">DECONNEXION</span></a></li>
+		</ul>
+		
+<!--		<ul id="breadcrumb">-->
+<!--			<li><a href="bkstatut" title="Home">Accueil</a></li>-->
+<!--			<li><a href="#" title="Dashboard">Bureau</a></li>-->
+<!--		</ul>-->
+		
+		</div>
+		</div>
+		<!-- End status bar -->
+		
+		<div id="header-shadow"></div>
+		<!-- End header -->
+		
+		<!-- Always visible control bar -->
+		<div id="control-bar" class="grey-bg clearfix">
+		<div class="container_12">
+		
+		<div class="float-left">
+		<button type="button" onClick="history.back()"><img src="<?php echo $this->baseUrl()."/gabarit/images/backend/"?>icons/fugue/navigation-180.png"
+			width="16" height="16"> Retour</button>
+		</div>
+		
+		<div class="float-right">
+		<button type="button" onClick="window.location.href='/fr/bkstatut'" class="red">Annuler</button>
+		<button type="reset" class="grey">Réinitialiser</button>
+<!--		<button type="button"><img src="<?php echo $this->baseUrl()."/gabarit/images/backend/"?>icons/fugue/tick-circle.png"-->
+<!--			width="16" height="16"> Sauver</button>-->
+		</div>
+		
+		</div>
+		</div>
+		<!-- End control bar -->
+		<div class="container_12">
+		<?php
+			/**
+			 * Départ de la zone d'écran pour l'application elle-même
+			 * et ses différents contenus.
+			 *
+			 * @brief Contenu des pages
+			 */
+			
+			echo $this->layout()->content
+		?>
+	    </div>
+		<!--[if lt IE 8]></div><![endif]-->
+		<!--[if lt IE 9]></div><![endif]-->
+	</body>
+	
+	<!-- End content -->
+	
+	<footer>
+		<div class="float-left">
+			<a href="bkaide" class="button">Aide</a>
+			<a href="bkabout" class="button">A propos</a>
+		</div>
+		<div class="float-right">
+			<a href="#top" class="button">
+				<img src="<?php echo $this->baseUrl()."/gabarit/images/backend/"?>icons/fugue/navigation-090.png" width="16" height="16">
+				Remonter
+			</a>
+		</div>
+	</footer>
+	
+</html>

@@ -1,0 +1,51 @@
+<?php
+	/**
+	 * Default Layout
+	 *
+	 * @category   Projet
+	 * @package    application
+	 * @subpackage layouts
+	 * @author     $LastChangedBy: jean-christophe.fraillon $
+	 * @version    $LastChangedRevision: 739 $
+	 */
+
+	// Initialisation de la balise Doctype.
+	echo $this->doctype();
+
+	// Création de la balise racine HTML.
+	$oHtml = new Html_Symbol("html");
+	$oHtml->setAttributes(array("xmlns" => "http://www.w3.org/1999/xhtml",
+								"xml:lang" => "fr",
+								"lang" => "fr"));
+
+	// Création des parties principales du layout: Header, Body et Footer.
+	$oHead = new Html_Symbol("head");
+	$oBody = new Html_Symbol("body");
+	$oBody->setAttribute('class', $this->layout()->sBodyCalss);
+
+
+	/**
+	 * Initialisation des balises d'entête reçu de la configuration
+	 * principale dans le Bootstrap.
+	 *
+	 * @see application/Bootstrap.php -> _initView()
+	 */
+	// Récupération de l'instance du gestionnaire d'entête
+//	$oHeadManager = Symbol_HeadManager::getInstance();
+	$oHead->setData($this->jQuery().
+					$this->headMeta().
+					$this->headTitle().
+					$this->headLink().
+					$this->headStyle().
+					$this->headScript()
+//					$oHeadManager->renderer()
+					);
+
+	$oBody->setData($this->layout()->content);
+
+	// Intégration des corps principaux dans la page HTML.
+	$oHtml->linkSymbol($oHead);
+	$oHtml->linkSymbol($oBody);
+
+	// Rendu de la page.
+	echo $oHtml->render();

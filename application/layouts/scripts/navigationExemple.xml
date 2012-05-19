@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Permet le création d'un menu de type Zend_Navigation et le mappage d'une application et ses modules.-->
+<!--@category   vue-->
+<!--@package    layout-->
+<!--@subpackage    scripts-->
+<configdata><!--Placez ici vos réserves de menu pré-établie. Il s'agit d'une sauvegarde de vos menus.-->
+	<nav>
+		<!--
+			le premier niveau sera le choix des module principaux que l'on
+			souhaite afficher
+		-->
+		<home>
+			<label>accueil</label>
+			<module>main</module>
+			<controller>index</controller>
+			<action>index</action>
+			<active>false</active>
+			<!--
+				la balise classe sur le menu principal permet de choisir une image
+				de presentation les image disponible dans le template sont : home
+				write comments medias users stats settings backup
+			-->
+			<class>home</class>
+			<title>Accueil</title>
+			<pages>
+				<!--
+					le deuxieme niveaux permet de choisir une fonctionnalite ou une vu
+					du module correspondant
+				-->
+				<page1>
+					<label>Tableau de bord</label>
+					<module>main</module>
+					<controller>index</controller>
+					<action>index</action>
+					<title>DashBoard</title>
+				</page1>
+				<page2>
+				<!-- le troisieme niveau sont compris dans des sous-menu deroulant -->
+					<label>test</label>
+					<controller>index</controller>
+					<action>page1</action>
+					<title>test</title>
+					<!--
+						la balise class with-menu est necessaire pour signifier qu'il y a
+						aura un sous menu deroulant est activer le CSS Correspondant
+					-->
+					<class>with-menu</class>
+					<pages>
+
+						<sPage>
+							<label>page1</label>
+							<controller>index</controller>
+							<action>page1</action>
+							<title>page1</title>
+							<id>icon</id>
+							<class>icon_search</class>
+							<!--
+								la balise pages permet au zend de determiner les niveau de menu
+								et sous menu on peut imbriquer autant de balise pages que l'on
+								souhaite. voir Zend DOC
+							-->
+							<pages>
+								<under>
+									<label>sousMenuTest</label>
+									<controller>index</controller>
+									<action>souspage1</action>
+									<title>sousmenu</title>
+									<!--
+										la balise id icon est necessaire pour affecter une image au
+										champ du sous menu
+									-->
+									<id>icon</id>
+									<!--
+										la balise classe permet de choisir l'image qui sera affecter
+										si on utilise la la balise id icon les icone dispo sont :
+										icon_address icon_alarm icon_blog icon_terminal icon_battery
+										icon_building icon_calendar icon_cards icon_chart
+										icon_computer icon_database icon_delete icon_doc_excel
+										icon_doc_pdf icon_doc_csv icon_doc_image icon_doc_web
+										icon_down icon_edit icon_film icon_security icon_images
+										icon_mail icon_monitor icon_newspaper icon_search icon_network
+										icon_server icon_export icon_refresh icon_reset icon_up
+									-->
+									<class>icon_address</class>
+									<pages>
+										<UnderMenuTest2>
+											<label>UnderMenuTest2</label>
+											<controller>index</controller>
+											<action>Underpage2</action>
+											<title>Undermenu</title>
+											<id>icon</id>
+											<class>icon_computer</class>
+										</UnderMenuTest2>
+									</pages>
+								</under>
+								<under2>
+									<label>sousMenuTest2</label>
+									<controller>index</controller>
+									<action>souspage2</action>
+									<title>sousmenu</title>
+									<id>icon</id>
+									<class>icon_server</class>
+
+								</under2>
+							</pages>
+
+						</sPage>
+						<sPage2>
+							<label>sous-page2</label>
+							<controller>index</controller>
+							<action>sous-page2</action>
+							<title>home</title>
+							<rid>icon</rid>
+							<class>icon_server</class>
+						</sPage2>
+						<sPage3>
+							<label>sous-page3</label>
+							<controller>index</controller>
+							<action>sous-page3</action>
+							<id>icon</id>
+							<title>home</title>
+
+						</sPage3>
+					</pages>
+				</page2>
+			</pages>
+		</home>
+		<exemple>
+			<label>exemple</label>
+			<module>backend</module>
+			<controller>index</controller>
+			<action>exemple</action>
+			<class>write</class>
+			<title>Exemples</title>
+			<pages>
+				<page4>
+					<label>prout</label>
+					<module>backend</module>
+					<controller>index</controller>
+					<action>exemple</action>
+					<title>prout</title>
+				</page4>
+				<page5>
+					<label>exemple1</label>
+					<controller>index</controller>
+					<action>exemple1</action>
+					<title>exemple1</title>
+				</page5>
+			</pages>
+		</exemple>
+		<taches>
+			<label>Tache</label>
+			<module>tache</module>
+			<controller>index</controller>
+			<action>index</action>
+			<class>users</class>
+			<title>tache</title>
+			<pages>
+				<pageTache>
+					<module>tache</module>
+					<label>tache</label>
+					<controller>index</controller>
+					<action>index</action>
+					<title>Tache</title>
+				</pageTache>
+			</pages>
+		</taches>
+	</nav>
+</configdata>

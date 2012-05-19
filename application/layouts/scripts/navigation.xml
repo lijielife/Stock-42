@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Grâce à Projet_Navigation_Page :
+
+- le calcul de la page active est automatique : plus besoin de spécifier le module, controller, action 
+  pour chaque page si on a défini la route
+
+- les ressources ACL sont calculées automatiquement si la route est définie (module_controller_action).
+  Il faut cependant que la classe Route utilisée comprenne la méthode getDefaults (d'où l'utilité
+  de Projet_Controller_Router_Route_Chain). On peut toujours préciser à la main une autre ressource.
+
+-->
+<configdata>
+	<menu>
+	</menu>
+</configdata>
