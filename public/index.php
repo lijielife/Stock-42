@@ -5,11 +5,12 @@
  */
 
 // Define path to root directory
-defined('ROOT_PATH')		|| define('ROOT_PATH', realpath(dirname(__FILE__) . '/../'));
-
+defined('ROOT_PATH')		|| define('ROOT_PATH', cleanPath(dirname(__FILE__).'/../') );
+//define('ROOT_PATH', '.');
 
 // Define path to public directory
 defined('PUBLIC_PATH')		|| define('PUBLIC_PATH', ROOT_PATH . '/public');
+defined('PHP_LIBRARY_PATH')		|| define('PHP_LIBRARY_PATH', ROOT_PATH . '/library/');
 
 // Define path to application directory
 defined('APPLICATION_PATH')	|| define('APPLICATION_PATH', ROOT_PATH . '/application');
@@ -30,20 +31,20 @@ defined('TEMPLATE_SCRIPTS_PATH')	|| define('TEMPLATE_SCRIPTS_PATH',	SCRIPTS_PATH
 defined('TEMPLATE_STYLES_PATH')		|| define('TEMPLATE_STYLES_PATH',	STYLES_PATH . '/template');
 
 // Define application environment
-defined('APP_ENV')  || define('APP_ENV', (getenv('APP_ENV') ? getenv('APP_ENV') : 'developpement'));
+defined('APP_ENV')  || define('APP_ENV', (getenv('APP_ENV') ? getenv('APP_ENV') : 'production'));
 
 // On s'assure de la présence de ZendFramework dans l'include path.
-set_include_path(implode(PATH_SEPARATOR, array(
-	realpath(ROOT_PATH . '/library'), get_include_path()
-)));
-
+//set_include_path(implode(PATH_SEPARATOR, array(
+//	realpath(ROOT_PATH . '/library'), get_include_path()
+//)));
 /** Zend_Application */
-require_once "Zend/Application.php";
+require_once PHP_LIBRARY_PATH."Zend/Application.php";
 
 try {
 	// Création de l'objet Zend_Application et lancement du bootstrap.
 	$application = new Zend_Application(APP_ENV, CONFIGS_PATH . '/application.ini');
 	$application->bootstrap()->run();
+	
 } catch (Exception $e) {
 	// Erreur principale en cas de défaut dans le lancement de Zend_Application.
 	$sErrTxt = "<div style='background: -moz-linear-gradient(center top , #F6EAB1, #E47272 8%, #A50C0F) repeat scroll 0 0 transparent;
@@ -84,6 +85,28 @@ try {
 		}
 	}
 	echo $sErrTxt."</div>";
+}
+
+function cleanPath($path) {
+	$result = array();
+	// $pathA = preg_split('/[\/\\\]/', $path);
+	$pathA = explode('/', $path);
+	if (!$pathA[0])
+		$result[] = '';
+	foreach ($pathA AS $key => $dir) {
+		if ($dir == '..') {
+			if (end($result) == '..') {
+				$result[] = '..';
+			} elseif (!array_pop($result)) {
+				$result[] = '..';
+			}
+		} elseif ($dir && $dir != '.') {
+			$result[] = $dir;
+		}
+	}
+	if (!end($pathA))
+		$result[] = '';
+	return implode('/', $result);
 }
 
 

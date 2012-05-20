@@ -7,10 +7,8 @@
  * @category   Projet
  * @package    modules_main
  * @subpackage controllers
- * @author     $LastChangedBy: jean-christophe.fraillon $
- * @version    $LastChangedRevision: 1015 $
  */
-class IndexController extends Projet_Controller_Action {
+class IndexController extends Zend_Controller_Action {
 	
 	protected $aParam = array();
 	
@@ -19,11 +17,11 @@ class IndexController extends Projet_Controller_Action {
 	 *
 	 * @return void
 	 */
-	public function init() {
+	//public function init() {
 		/* Initialize action controller here */
-		parent::init();
-		$this->aParam = $this->_request->getParams(); # Récupération des paramètres transmis via l'URL
-	}
+		//parent::init();
+		//$this->aParam = $this->_request->getParams(); # Récupération des paramètres transmis via l'URL
+	//}
 	
 	/**
 	 * Action par défaut - affiche l'index.
@@ -33,7 +31,7 @@ class IndexController extends Projet_Controller_Action {
 	 */
 	public function indexAction() {
 		// On place le numéro de page dans la vue pour information de débuggage
-		$this->view->placeholder('numecran')->set("A1.1");
+		//$this->view->placeholder('numecran')->set("A1.1");
 		
 	}
 }

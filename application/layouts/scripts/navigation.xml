@@ -13,5 +13,12 @@ Grâce à Projet_Navigation_Page :
 -->
 <configdata>
 	<menu>
+	<accueil>
+		<title>accueil</title>
+		<label>accueil</label>
+		<module>main</module>
+		<controller>index</controller>
+		<action>index</action>
+	</accueil>
 	</menu>
 </configdata>

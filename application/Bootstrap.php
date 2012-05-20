@@ -38,7 +38,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		// Configuration du chemin relatif au stockage des fichiers
 		define('UPLOAD_PATH',	$aApp['upload_path']);
 
-		Zend_Registry::set('version', APP_DEBUG ? $this->getSVNRevision() : APP_VERSION);
 	}
 	
 	
@@ -121,27 +120,22 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$this->bootstrap('frontController');
 		$front = $this->getResource('frontController');
 		$view = $this->getResource('view');
-		$front->registerPlugin(new Projet_Controller_Plugin_Translate($view));
+		//$front->registerPlugin(new Projet_Controller_Plugin_Translate($view));
 	}
 
-	protected function _initLdap() {
-		Zend_Registry::set('ldap', $this->getOption('ldap'));
-		Zend_Registry::set('appName', 'Heliops');
-	}
-		
 	/**
 	 * Initialisation du routeur.
 	 */
-	protected function _initRouter() {
-		$f = Zend_Controller_Front::getInstance();
+// 	protected function _initRouter() {
+// 		$f = Zend_Controller_Front::getInstance();
 
-		$router = $f->getRouter();
-		// le site n'est plus accessible par module/controller/action
-		$router->removeDefaultRoutes();
-		$router->addConfig(new Zend_Config_Ini(CONFIGS_PATH . '/routes.ini', 'routes'), 'routes');
+// 		$router = $f->getRouter();
+// 		// le site n'est plus accessible par module/controller/action
+// 		$router->removeDefaultRoutes();
+// 		$router->addConfig(new Zend_Config_Ini(CONFIGS_PATH . '/routes.ini', 'routes'), 'routes');
 
-		return $router;
-	}
+// 		return $router;
+// 	}
 
 	/**
 	 * Initialisation des ACLs.
@@ -182,16 +176,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	 * @return void
 	 */
 	protected function _initViewRenderer() {
-
-		// Equivalent à: require_once 'Projet/Template/Constantes.php';
-		// Permet l'initialisation des constantes du CSS utilisatble dans les vues.
-		new Template_Constantes();
-
-		// Initialisation de l'instance du gestionnaire d'entête HTML si ce n'est pas déjà fait
-//		$oHeadManager = Symbol_HeadManager::getInstance();
-//		$oHeadManager->addPath(GABARIT_PATH);
-//		$oHeadManager->addPath(GABARIT_PATH . '/styles');
-//		$oHeadManager->addPath(GABARIT_PATH . '/scripts');
 
 		$oViewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
 		$this->bootstrap('view');
@@ -234,13 +218,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
 										  
 		// Les styles globaux
-		//$oViewRenderer->view->headLink()->appendStylesheet();
+		$oViewRenderer->view->headLink()->appendStylesheet(STYLES_PATH.'/base.css');
 
 		// Initialise le menu Zend_Navigation qui n'existe pas par défaut
-		$aMenu = $this->getOption('navigation');
-		$oMenu = new Projet_View_Navigation($aMenu['MenuSection'], $aMenu['XmlPath'] . "/" . $aMenu['MenuXml'] . ".xml");
+		//$aMenu = $this->getOption('navigation');
+		//$oMenu = new Zend_View_Navigation($aMenu['MenuSection'], $aMenu['XmlPath'] . "/" . $aMenu['MenuXml'] . ".xml");
 		
-		$oViewRenderer->view->navigation($oMenu->getMenu());
+		//$oViewRenderer->view->navigation($oMenu->getMenu());
+		
+		$view = $this->bootstrap('layout')->getResource('layout')->getView();
+		$config = new Zend_Config_Xml(APPLICATION_PATH . '/layouts/scripts/navigation.xml', 'menu');
+		$view->navigation(new Zend_Navigation($config));
 	}
 
 	/**

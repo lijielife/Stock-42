@@ -1,49 +1,19 @@
 <?php
-	/**	@brief Default Layout
-	 * Chargement de la vue de l'application par défaut.
-	 *
-	 * @li Possibilité de charger le bas de la page, partie fixe "BOTTOM", à partir de la vue via la méthode @a placeholder()
-	 * @code
-	 * 	// Création d'un bouton
-	 * 	$oButton = new Symbol_Button("fonction(js);", "Enregistrer");
-	 *  // Enregistrement du contenu au format texte : ne pas oublier la méthode render() sur l'élément objet !
-	 *  $this->placeholder("bottom")->set($oButton->render());
-	 * @endcode
-	 */
-
-
-
 	// Initialisation de la balise Doctype.
-	print $this->doctype();
-
+	echo $this->doctype();
+	echo $this->headLink();
+	echo $this->headScript();
 	// On récupère l'éventuelle identité de la personne connectée.
-	$oIdent = Zend_Auth::getInstance()->getIdentity();
+	//$oIdent = Zend_Auth::getInstance()->getIdentity();
 
 	// Récupération de la langue en cours
-	$local = Zend_Registry::get("Zend_Locale");
+	//$local = Zend_Registry::get("Zend_Locale");
 
-	// Création de la balise racine HTML.
-	$oHtml = new Html_Symbol("html");
-//	$oHtml->setAttributes(
-//		array(
-//			"xmlns"		=> "http://www.w3.org/1999/xhtml",
-//			"xml:lang"	=> $local,
-//			"lang"		=> $local
-//		)
-//	);
-
-	/**
-	 * Initialisation des balises d'entête reçu de la configuration
-	 * principale dans le Bootstrap.
-	 *
-	 * @see application/Bootstrap.php->_initView()
-	 */
-	
 	// Ajout du translate des éléments par défaut via la méthode "translate()" dans JavaScript
-	$this->scriptTranslate("default");
+	//$this->scriptTranslate("default");
 	
 	// Ajout du translate des éléments associés à la route via la méthode "translate()" dans JavaScript
-	$this->scriptTranslate($this->aParams["route"]);
+	//$this->scriptTranslate($this->aParams["route"]);
            
 // 	// Chargement des éléments du HEADER
 	
@@ -60,4 +30,27 @@
 // 		// Ajout du message dans l'article
 // 		$oDivArticle->linkSymbol($oMessageDefault);
 // 	}
+
+	//bare de coté pour les menus
+	$oSideBar = new Projet_Xml('sidebar');
+	$oSideBar->setAttr('id', 'sidebar');
+	//mise en place du logo
+	$oLogo = new Projet_Xml('span');
+	$oSideBar->append($oLogo);
+	$oSideBar->append($this->navigation()->menu());
 	
+	echo $oSideBar;
+	//création d'un endroit pour le titre de la page courante
+	$oTopTitre = new Projet_Xml('div');
+	$oTopTitre->setAttr('id', 'TitreHaut');
+	$oTitre = new Projet_Xml('h1');
+	$oTitre->append($this->placeholder('TitreHaut'));
+	$oTopTitre->append($oTitre);
+	echo $oTopTitre;
+	
+	//creation de l'élément principal de contenu
+	$oArticle = new Projet_Xml('article');
+	$oArticle->setAttr('id', 'article');
+	$oArticle->append($this->layout()->content);
+	
+	echo $oArticle;
