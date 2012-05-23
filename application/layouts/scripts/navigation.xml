@@ -16,24 +16,54 @@ Grâce à Projet_Navigation_Page :
 	<accueil>
 		<title>accueil</title>
 		<label>accueil</label>
-		<module>main</module>
-		<controller>index</controller>
-		<action>index</action>
+		<route>main-accueil</route>
 	</accueil>
-	<pageexemple>
-		<title>exemple</title>
-		<label>exemple</label>
-		<module>main</module>
-		<controller>index</controller>
-		<action>index</action>
-	</pageexemple>
+	
+												<!-- 	Module de gestion des Stock -->
+	
+	<modulestock>
+		<label>Gestion des Stocks</label>
+		<title>Module de gestion des stocks</title>
+		<route>stock-accueil</route>
+		<pages>
+			<actuel>
+				<label>Stock Globaux</label>
+				<route>stock-global</route>
+				<pages>
+					<frais>
+						<label>Produits Frais</label>
+						<route>stock-frais</route>
+					</frais>
+					<epicerie>
+						<label>Epicerie</label>
+						<route>stock-autres</route>
+					</epicerie>
+				</pages>
+			</actuel>
+			<gestion>
+				<label>Gestion des Produits</label>
+				<route>stock-gestion</route>
+				<pages>
+					<ajout>
+						<label>Ajout d'un produit</label>
+						<route>stock-ajout</route>
+					</ajout>
+					<suppression>
+						<label>Consommation d'un produit</label>
+						<route>stock-suppression</route>
+					</suppression>
+				</pages>
+			</gestion>
+		</pages>
+	</modulestock>
+	
+	
+	
 	
 	<logout>
 		<title>Se déconnecter</title>
 		<label>Déconnexion</label>
-		<module>main</module>
-		<controller>index</controller>
-		<action>logout</action>
+		<route>main-logout</route>
 	</logout>
 	</menu>
 </configdata>

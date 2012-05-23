@@ -128,16 +128,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	/**
 	 * Initialisation du routeur.
 	 */
-// 	protected function _initRouter() {
-// 		$f = Zend_Controller_Front::getInstance();
+	protected function _initRouter() {
+		$f = Zend_Controller_Front::getInstance();
 
-// 		$router = $f->getRouter();
-// 		// le site n'est plus accessible par module/controller/action
-// 		$router->removeDefaultRoutes();
-// 		$router->addConfig(new Zend_Config_Ini(CONFIGS_PATH . '/routes.ini', 'routes'), 'routes');
+		$router = $f->getRouter();
+		// le site n'est plus accessible par module/controller/action
+		$router->removeDefaultRoutes();
+		$router->addConfig(new Zend_Config_Ini(CONFIGS_PATH . '/routes.ini', 'routes'), 'routes');
 
-// 		return $router;
-// 	}
+		return $router;
+	}
 
 	/**
 	 * Initialisation des ACLs.
@@ -220,8 +220,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
 										  
 		// Les styles globaux
-		$oViewRenderer->view->headLink()->appendStylesheet(STYLES_PATH.'/base.css')
-										->appendStylesheet(STYLES_PATH.'/form.css');
+		$oViewRenderer->view->headLink()->appendStylesheet(STYLES_PATH.'/Layout.css')
+										->appendStylesheet(STYLES_PATH.'/Form.css')
+										->appendStylesheet(STYLES_PATH.'/Menu.css');
 
 		// Initialise le menu Zend_Navigation qui n'existe pas par défaut
 		//$aMenu = $this->getOption('navigation');
