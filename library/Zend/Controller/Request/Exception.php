@@ -22,7 +22,7 @@
 
 
 /** Zend_Controller_Exception */
-require_once PHP_LIBRARY_PATH.'Zend/Controller/Exception.php';
+require_once 'Zend/Controller/Exception.php';
 
 
 /**

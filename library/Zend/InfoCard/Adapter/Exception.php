@@ -23,7 +23,7 @@
 /**
  * @see Zend_InfoCard_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/InfoCard/Exception.php';
+require_once 'Zend/InfoCard/Exception.php';
 
 /**
  * @category   Zend

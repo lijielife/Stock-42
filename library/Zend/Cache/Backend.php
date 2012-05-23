@@ -156,9 +156,9 @@ class Zend_Cache_Backend
             foreach (array('TMPDIR', 'TEMP', 'TMP', 'windir', 'SystemRoot') as $key) {
                 if (isset($tab[$key])) {
                     if (($key == 'windir') or ($key == 'SystemRoot')) {
-                        $dir = cleanPath($tab[$key] . '\\temp');
+                        $dir = realpath($tab[$key] . '\\temp');
                     } else {
-                        $dir = cleanPath($tab[$key]);
+                        $dir = realpath($tab[$key]);
                     }
                     if ($this->_isGoodTmpDir($dir)) {
                         return $dir;
@@ -168,7 +168,7 @@ class Zend_Cache_Backend
         }
         $upload = ini_get('upload_tmp_dir');
         if ($upload) {
-            $dir = cleanPath($upload);
+            $dir = realpath($upload);
             if ($this->_isGoodTmpDir($dir)) {
                 return $dir;
             }
@@ -182,7 +182,7 @@ class Zend_Cache_Backend
         // Attemp to detect by creating a temporary file
         $tempFile = tempnam(md5(uniqid(rand(), TRUE)), '');
         if ($tempFile) {
-            $dir = cleanPath(dirname($tempFile));
+            $dir = realpath(dirname($tempFile));
             unlink($tempFile);
             if ($this->_isGoodTmpDir($dir)) {
                 return $dir;
@@ -235,9 +235,9 @@ class Zend_Cache_Backend
         }
 
         // Create a default logger to the standard output stream
-        require_once PHP_LIBRARY_PATH.'Zend/Log.php';
-        require_once PHP_LIBRARY_PATH.'Zend/Log/Writer/Stream.php';
-        require_once PHP_LIBRARY_PATH.'Zend/Log/Filter/Priority.php';
+        require_once 'Zend/Log.php';
+        require_once 'Zend/Log/Writer/Stream.php';
+        require_once 'Zend/Log/Filter/Priority.php';
         $logger = new Zend_Log(new Zend_Log_Writer_Stream('php://output'));
         $logger->addFilter(new Zend_Log_Filter_Priority(Zend_Log::WARN, '<='));
         $this->_directives['logger'] = $logger;

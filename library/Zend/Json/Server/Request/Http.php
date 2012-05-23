@@ -22,7 +22,7 @@
 /**
  * @see Zend_Json_Server_Request
  */
-require_once PHP_LIBRARY_PATH.'Zend/Json/Server/Request.php';
+require_once 'Zend/Json/Server/Request.php';
 
 /**
  * @category   Zend

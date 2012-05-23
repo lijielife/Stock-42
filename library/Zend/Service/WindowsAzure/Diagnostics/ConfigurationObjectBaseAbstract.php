@@ -23,7 +23,7 @@
 /**
  * @see Zend_Service_WindowsAzure_Diagnostics_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/WindowsAzure/Diagnostics/Exception.php';
+require_once 'Zend/Service/WindowsAzure/Diagnostics/Exception.php';
 
 /**
  * @category   Zend

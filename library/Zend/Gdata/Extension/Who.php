@@ -24,22 +24,22 @@
 /**
  * @see Zend_Gdata_Extension
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Extension.php';
+require_once 'Zend/Gdata/Extension.php';
 
 /**
  * @see Zend_Gdata_Extension_AttendeeStatus
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Extension/AttendeeStatus.php';
+require_once 'Zend/Gdata/Extension/AttendeeStatus.php';
 
 /**
  * @see Zend_Gdata_Extension_AttendeeType
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Extension/AttendeeType.php';
+require_once 'Zend/Gdata/Extension/AttendeeType.php';
 
 /**
  * @see Zend_Gdata_Extension_EntryLink
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Extension/EntryLink.php';
+require_once 'Zend/Gdata/Extension/EntryLink.php';
 
 /**
  * Data model class to represent a participant

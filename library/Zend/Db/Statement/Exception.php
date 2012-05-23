@@ -23,7 +23,7 @@
 /**
  * @see Zend_Db_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Db/Exception.php';
+require_once 'Zend/Db/Exception.php';
 
 /**
  * Zend_Db_Statement_Exception

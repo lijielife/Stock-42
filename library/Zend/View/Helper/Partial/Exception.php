@@ -22,7 +22,7 @@
 
 
 /** Zend_View_Exception */
-require_once PHP_LIBRARY_PATH.'Zend/View/Exception.php';
+require_once 'Zend/View/Exception.php';
 
 
 /**

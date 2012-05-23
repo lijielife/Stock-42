@@ -23,7 +23,7 @@
 /**
  * @see Zend_Service_DeveloperGarden_Response_ResponseAbstract
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/DeveloperGarden/Response/ResponseAbstract.php';
+require_once 'Zend/Service/DeveloperGarden/Response/ResponseAbstract.php';
 
 /**
  * @category   Zend

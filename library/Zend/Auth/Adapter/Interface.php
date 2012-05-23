@@ -24,7 +24,7 @@
 /**
  * @see Zend_Auth_Result
  */
-require_once PHP_LIBRARY_PATH.'Zend/Auth/Result.php';
+require_once 'Zend/Auth/Result.php';
 
 
 /**

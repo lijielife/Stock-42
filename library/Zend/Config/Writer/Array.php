@@ -22,7 +22,7 @@
 /**
  * @see Zend_Config_Writer
  */
-require_once PHP_LIBRARY_PATH.'Zend/Config/Writer/FileAbstract.php';
+require_once 'Zend/Config/Writer/FileAbstract.php';
 
 /**
  * @category   Zend

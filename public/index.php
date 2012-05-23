@@ -34,11 +34,11 @@ defined('TEMPLATE_STYLES_PATH')		|| define('TEMPLATE_STYLES_PATH',	STYLES_PATH .
 defined('APP_ENV')  || define('APP_ENV', (getenv('APP_ENV') ? getenv('APP_ENV') : 'production'));
 
 // On s'assure de la présence de ZendFramework dans l'include path.
-//set_include_path(implode(PATH_SEPARATOR, array(
-//	realpath(ROOT_PATH . '/library'), get_include_path()
-//)));
+set_include_path(implode(PATH_SEPARATOR, array(
+	realpath(ROOT_PATH . '/library'), get_include_path()
+)));
 /** Zend_Application */
-require_once PHP_LIBRARY_PATH."Zend/Application.php";
+require_once "Zend/Application.php";
 
 try {
 	// Création de l'objet Zend_Application et lancement du bootstrap.

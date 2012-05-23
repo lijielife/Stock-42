@@ -23,7 +23,7 @@
 /**
  * Abstract class for extension
  */
-require_once PHP_LIBRARY_PATH.'Zend/View/Helper/FormElement.php';
+require_once 'Zend/View/Helper/FormElement.php';
 
 
 /**

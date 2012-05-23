@@ -21,7 +21,7 @@
  */
 
 /** Zend_Log_Formatter_Abstract */
-require_once PHP_LIBRARY_PATH.'Zend/Log/Formatter/Abstract.php';
+require_once 'Zend/Log/Formatter/Abstract.php';
 
 /**
  * @category   Zend

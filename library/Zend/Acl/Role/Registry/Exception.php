@@ -23,7 +23,7 @@
 /**
  * @see Zend_Acl_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Acl/Exception.php';
+require_once 'Zend/Acl/Exception.php';
 
 
 /**

@@ -23,7 +23,7 @@
 /**
  * Zend_Service_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/DeveloperGarden/Exception.php';
+require_once 'Zend/Service/DeveloperGarden/Exception.php';
 
 /**
  * @category   Zend

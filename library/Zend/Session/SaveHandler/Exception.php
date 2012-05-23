@@ -23,7 +23,7 @@
 /**
  * @see Zend_Session_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Session/Exception.php';
+require_once 'Zend/Session/Exception.php';
 
 /**
  * Zend_Session_SaveHandler_Exception

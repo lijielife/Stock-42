@@ -23,7 +23,7 @@
 /**
  * @see Zend_Http_Response
  */
-require_once PHP_LIBRARY_PATH.'Zend/Http/Response.php';
+require_once 'Zend/Http/Response.php';
 
 /**
  * @category   Zend

@@ -21,7 +21,7 @@
 
 
 /** Zend_Pdf_Element_String */
-require_once PHP_LIBRARY_PATH.'Zend/Pdf/Element/String.php';
+require_once 'Zend/Pdf/Element/String.php';
 
 
 /**

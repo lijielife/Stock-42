@@ -21,7 +21,7 @@
  */
 
 /** Zend_Log_Writer_Abstract */
-require_once PHP_LIBRARY_PATH.'Zend/Log/Writer/Abstract.php';
+require_once 'Zend/Log/Writer/Abstract.php';
 
 /**
  * @category   Zend

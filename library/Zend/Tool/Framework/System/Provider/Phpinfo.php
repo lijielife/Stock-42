@@ -19,7 +19,7 @@
  * @version    $Id: Phpinfo.php 23953 2011-05-03 05:47:39Z ralph $
  */
 
-require_once PHP_LIBRARY_PATH.'Zend/Tool/Framework/Provider/Interface.php';
+require_once 'Zend/Tool/Framework/Provider/Interface.php';
 
 /**
  * @category   Zend
@@ -32,8 +32,7 @@ class Zend_Tool_Framework_System_Provider_Phpinfo implements Zend_Tool_Framework
 
     public function showAction()
     {
-    	//TODO :trouver
-        //phpinfo();
+        phpinfo();
     }
 
 }

@@ -21,7 +21,7 @@
  */
 
 /** Zend_Config */
-require_once PHP_LIBRARY_PATH.'Zend/Config.php';
+require_once 'Zend/Config.php';
 
 /**
  * @package    Zend_Controller

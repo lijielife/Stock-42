@@ -61,8 +61,7 @@ class Zend_OpenId_Consumer_Storage_File extends Zend_OpenId_Consumer_Storage
                     $tmp = "/tmp";
                 }
             }
-            //TODO:Trouver une solution
-            $user = 'francois';//get_current_user();
+            $user = get_current_user();
             if (is_string($user) && !empty($user)) {
                 $tmp .= '/' . $user;
             }
@@ -74,7 +73,7 @@ class Zend_OpenId_Consumer_Storage_File extends Zend_OpenId_Consumer_Storage
                 /**
                  * @see Zend_OpenId_Exception
                  */
-                require_once PHP_LIBRARY_PATH.'Zend/OpenId/Exception.php';
+                require_once 'Zend/OpenId/Exception.php';
                 throw new Zend_OpenId_Exception(
                     'Cannot access storage directory ' . $dir,
                     Zend_OpenId_Exception::ERROR_STORAGE);
@@ -84,7 +83,7 @@ class Zend_OpenId_Consumer_Storage_File extends Zend_OpenId_Consumer_Storage
             /**
              * @see Zend_OpenId_Exception
              */
-            require_once PHP_LIBRARY_PATH.'Zend/OpenId/Exception.php';
+            require_once 'Zend/OpenId/Exception.php';
             throw new Zend_OpenId_Exception(
                 'Cannot create a lock file in the directory ' . $dir,
                 Zend_OpenId_Exception::ERROR_STORAGE);
@@ -94,7 +93,7 @@ class Zend_OpenId_Consumer_Storage_File extends Zend_OpenId_Consumer_Storage
             /**
              * @see Zend_OpenId_Exception
              */
-            require_once PHP_LIBRARY_PATH.'Zend/OpenId/Exception.php';
+            require_once 'Zend/OpenId/Exception.php';
             throw new Zend_OpenId_Exception(
                 'Cannot create a lock file in the directory ' . $dir,
                 Zend_OpenId_Exception::ERROR_STORAGE);
@@ -104,7 +103,7 @@ class Zend_OpenId_Consumer_Storage_File extends Zend_OpenId_Consumer_Storage
             /**
              * @see Zend_OpenId_Exception
              */
-            require_once PHP_LIBRARY_PATH.'Zend/OpenId/Exception.php';
+            require_once 'Zend/OpenId/Exception.php';
             throw new Zend_OpenId_Exception(
                 'Cannot create a lock file in the directory ' . $dir,
                 Zend_OpenId_Exception::ERROR_STORAGE);
@@ -140,8 +139,6 @@ class Zend_OpenId_Consumer_Storage_File extends Zend_OpenId_Consumer_Storage
                 fclose($lock);
                 return false;
             }
-            //TODO:trouver
-            die('erreur opération interdite');
             $data = serialize(array($url, $handle, $macFunc, $secret, $expires));
             fwrite($f, $data);
             if (function_exists('symlink')) {

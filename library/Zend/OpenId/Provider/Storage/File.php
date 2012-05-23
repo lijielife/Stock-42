@@ -61,8 +61,7 @@ class Zend_OpenId_Provider_Storage_File extends Zend_OpenId_Provider_Storage
                     $tmp = "/tmp";
                 }
             }
-            //TODO:trouver une solution
-            $user = 'francois';//get_current_user();
+            $user = get_current_user();
             if (is_string($user) && !empty($user)) {
                 $tmp .= '/' . $user;
             }

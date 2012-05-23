@@ -22,7 +22,7 @@
 
 
 /** Zend_XmlRpc_Client_Exception */
-require_once PHP_LIBRARY_PATH.'Zend/XmlRpc/Client/Exception.php';
+require_once 'Zend/XmlRpc/Client/Exception.php';
 
 
 /**

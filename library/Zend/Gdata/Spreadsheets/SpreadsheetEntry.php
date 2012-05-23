@@ -24,7 +24,7 @@
 /**
  * @see Zend_Gdata_Entry
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Entry.php';
+require_once 'Zend/Gdata/Entry.php';
 
 /**
  * Concrete class for working with Atom entries.

@@ -23,7 +23,7 @@
 /**
  * @see Zend_Db_Table_Abstract
  */
-require_once PHP_LIBRARY_PATH.'Zend/Db/Table/Abstract.php';
+require_once 'Zend/Db/Table/Abstract.php';
 
 /**
  * @category   Zend

@@ -25,7 +25,7 @@
 /**
  * @see Zend_Service_Simpy_Watchlist
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/Simpy/Watchlist.php';
+require_once 'Zend/Service/Simpy/Watchlist.php';
 
 
 /**

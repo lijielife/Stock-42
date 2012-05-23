@@ -22,17 +22,17 @@
 /**
  * @see Zend_Feed_Reader
  */
-require_once PHP_LIBRARY_PATH.'Zend/Feed/Reader.php';
+require_once 'Zend/Feed/Reader.php';
 
 /**
  * @see Zend_Feed_Reader_Extension_EntryAbstract
  */
-require_once PHP_LIBRARY_PATH.'Zend/Feed/Reader/Extension/EntryAbstract.php';
+require_once 'Zend/Feed/Reader/Extension/EntryAbstract.php';
 
 /**
  * @see Zend_Date
  */
-require_once PHP_LIBRARY_PATH.'Zend/Date.php';
+require_once 'Zend/Date.php';
 
 /**
  * @category   Zend

@@ -24,12 +24,12 @@
 /**
  * @see Zend_Gdata
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata.php';
+require_once 'Zend/Gdata.php';
 
 /**
  * @see Zend_Gdata_App_MediaEntry
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/App/MediaEntry.php';
+require_once 'Zend/Gdata/App/MediaEntry.php';
 
 /**
  * Represents the Gdata flavor of an Atom entry

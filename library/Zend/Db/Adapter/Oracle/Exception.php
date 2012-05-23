@@ -23,7 +23,7 @@
 /**
  * Zend_Db_Adapter_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Db/Adapter/Exception.php';
+require_once 'Zend/Db/Adapter/Exception.php';
 
 /**
  * Zend_Db_Adapter_Oracle_Exception

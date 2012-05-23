@@ -24,7 +24,7 @@
 /**
  * @see Zend_Gdata_App_Extension
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/App/Extension.php';
+require_once 'Zend/Gdata/App/Extension.php';
 
 /**
  * Represents the media:copyright element

@@ -20,5 +20,20 @@ Grâce à Projet_Navigation_Page :
 		<controller>index</controller>
 		<action>index</action>
 	</accueil>
+	<pageexemple>
+		<title>exemple</title>
+		<label>exemple</label>
+		<module>main</module>
+		<controller>index</controller>
+		<action>index</action>
+	</pageexemple>
+	
+	<logout>
+		<title>Se déconnecter</title>
+		<label>Déconnexion</label>
+		<module>main</module>
+		<controller>index</controller>
+		<action>logout</action>
+	</logout>
 	</menu>
 </configdata>

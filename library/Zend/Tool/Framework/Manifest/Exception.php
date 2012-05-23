@@ -23,7 +23,7 @@
 /**
  * @see Zend_Tool_Framework_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Tool/Framework/Exception.php';
+require_once 'Zend/Tool/Framework/Exception.php';
 
 /**
  * @category   Zend

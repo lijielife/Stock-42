@@ -22,7 +22,7 @@
 
 
 /** Zend_View_Helper_FormRadio */
-require_once PHP_LIBRARY_PATH.'Zend/View/Helper/FormRadio.php';
+require_once 'Zend/View/Helper/FormRadio.php';
 
 
 /**

@@ -23,7 +23,7 @@
 /**
  * @see Zend_Tool_Project_Context_Filesystem_Directory
  */
-require_once PHP_LIBRARY_PATH.'Zend/Tool/Project/Context/Filesystem/Directory.php';
+require_once 'Zend/Tool/Project/Context/Filesystem/Directory.php';
 
 /**
  * This class is the front most class for utilizing Zend_Tool_Project
@@ -65,7 +65,7 @@ class Zend_Tool_Project_Context_Zf_ZfStandardLibraryDirectory extends Zend_Tool_
         if ($zfPath != false) {
             $zfIterator = new RecursiveDirectoryIterator($zfPath);
             foreach ($rii = new RecursiveIteratorIterator($zfIterator, RecursiveIteratorIterator::SELF_FIRST) as $file) {
-                $relativePath = preg_replace('#^'.preg_quote(cleanPath($zfPath), '#').'#', '', cleanPath($file->getPath())) . DIRECTORY_SEPARATOR . $file->getFilename();
+                $relativePath = preg_replace('#^'.preg_quote(realpath($zfPath), '#').'#', '', realpath($file->getPath())) . DIRECTORY_SEPARATOR . $file->getFilename();
                 if (strpos($relativePath, DIRECTORY_SEPARATOR . '.') !== false) {
                     continue;
                 }
@@ -87,13 +87,13 @@ class Zend_Tool_Project_Context_Zf_ZfStandardLibraryDirectory extends Zend_Tool_
      */
     protected function _getZfPath()
     {
-        require_once PHP_LIBRARY_PATH.'Zend/Loader.php';
+        require_once 'Zend/Loader.php';
         foreach (Zend_Loader::explodeIncludePath() as $includePath) {
             if (!file_exists($includePath) || $includePath[0] == '.') {
                 continue;
             }
 
-            if (cleanPath($checkedPath = rtrim($includePath, '\\/') . '/Zend/Loader.php') !== false && file_exists($checkedPath)) {
+            if (realpath($checkedPath = rtrim($includePath, '\\/') . '/Zend/Loader.php') !== false && file_exists($checkedPath)) {
                 return dirname($checkedPath);
             }
         }

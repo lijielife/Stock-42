@@ -23,7 +23,7 @@
 /**
  * @see Zend_CodeGenerator_Php_Abstract
  */
-require_once PHP_LIBRARY_PATH.'Zend/CodeGenerator/Php/Abstract.php';
+require_once 'Zend/CodeGenerator/Php/Abstract.php';
 
 /**
  * @category   Zend

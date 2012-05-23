@@ -8,30 +8,67 @@
  * @package    modules_main
  * @subpackage controllers
  */
-class IndexController extends Zend_Controller_Action {
+class IndexController extends Projet_Controller_Action {
 	
-	protected $aParam = array();
-	
-	/**
-	 * Initialisation du controleur
-	 *
-	 * @return void
-	 */
-	//public function init() {
-		/* Initialize action controller here */
-		//parent::init();
-		//$this->aParam = $this->_request->getParams(); # Récupération des paramètres transmis via l'URL
-	//}
-	
-	/**
-	 * Action par défaut - affiche l'index.
-	 * Affiche un flash info selon les parametres configures dans flashinfo.ini (via interface modalBox)
-	 *
-	 * @return void
-	 */
-	public function indexAction() {
-		// On place le numéro de page dans la vue pour information de débuggage
-		//$this->view->placeholder('numecran')->set("A1.1");
+	public function getAuthAdapter(array $params) {
+		$oAuth = new Zend_Auth_Adapter_DbTable();
+		$oAuth->setTableName('USERS')
+			  ->setIdentityColumn('LOGIN')
+			  ->setCredentialColumn('MDP')
+			  ->setIdentity($params[Form_Login::LOGIN])
+    		  ->setCredential($params[Form_Login::PASSWD])
+			  ->setCredentialTreatment('MD5(?)');
 		
+		return $oAuth;
 	}
+	
+	public function loginAction() {
+		if (Zend_Auth::getInstance()->hasIdentity()) {
+			$this->view->form = "<p> Vous êtes déjà enregistrés </p>";
+		}
+		$this->view->form = $this->getLoginForm();
+	}
+	
+	public function indexAction() {
+		$this->view->message = "succes du login";
+	}
+	
+	public function verifuserAction() {
+		$request = $this->getRequest();
+		// Check if we have a POST request
+		if (!$request->isPost()) {
+			return $this->_helper->redirector('index');
+		}
+		
+		// Get our form and validate it
+		$form = $this->getLoginForm();
+		if (!$form->isValid($request->getPost())) {
+			// Invalid entries
+			$this->view->form = $form;
+			return $this->render('login'); // re-render the login form
+		}
+		
+		// Get our authentication adapter and check credentials
+		$adapter = $this->getAuthAdapter($form->getValues());
+		$auth    = Zend_Auth::getInstance();
+		$result  = $auth->authenticate($adapter);
+		if (!$result->isValid()) {
+			// Invalid credentials
+			$form->addError('Login ou Mot de Passe faux');
+			$this->view->form = $form;
+			return $this->render('login'); // re-render the login form
+		}
+		$auth->getStorage()->write($adapter->getResultRowObject(null, 'MDP'));
+		// We're authenticated! Redirect to the home page
+		$this->_helper->redirector('index', 'index');
+	}
+	
+	public function getLoginForm() {
+		return new Form_Login();
+	}
+	public function logoutAction() {
+		Zend_Auth::getInstance()->clearIdentity();
+		$this->_helper->redirector('login', 'index'); // back to login page
+	}
+	
 }

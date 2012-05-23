@@ -21,7 +21,7 @@
  */
 
 /** Zend_Form_Exception */
-require_once PHP_LIBRARY_PATH.'Zend/Form/Exception.php';
+require_once 'Zend/Form/Exception.php';
 
 /**
  * Exception for Zend_Form component.

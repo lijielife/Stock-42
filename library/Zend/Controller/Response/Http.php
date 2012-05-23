@@ -21,7 +21,7 @@
 
 
 /** Zend_Controller_Response_Abstract */
-require_once PHP_LIBRARY_PATH.'Zend/Controller/Response/Abstract.php';
+require_once 'Zend/Controller/Response/Abstract.php';
 
 
 /**

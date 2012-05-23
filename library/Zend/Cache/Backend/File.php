@@ -23,12 +23,12 @@
 /**
  * @see Zend_Cache_Backend_Interface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Cache/Backend/ExtendedInterface.php';
+require_once 'Zend/Cache/Backend/ExtendedInterface.php';
 
 /**
  * @see Zend_Cache_Backend
  */
-require_once PHP_LIBRARY_PATH.'Zend/Cache/Backend.php';
+require_once 'Zend/Cache/Backend.php';
 
 
 /**
@@ -158,7 +158,7 @@ class Zend_Cache_Backend_File extends Zend_Cache_Backend implements Zend_Cache_B
         }
         if ($trailingSeparator) {
             // add a trailing DIRECTORY_SEPARATOR if necessary
-            $value = rtrim(cleanPath($value), '\\/') . DIRECTORY_SEPARATOR;
+            $value = rtrim(realpath($value), '\\/') . DIRECTORY_SEPARATOR;
         }
         $this->_options['cache_dir'] = $value;
     }
@@ -356,9 +356,8 @@ class Zend_Cache_Backend_File extends Zend_Cache_Backend implements Zend_Cache_B
      */
     public function getFillingPercentage()
     {
-    	//TODO:trouver
-        //$free = disk_free_space($this->_options['cache_dir']);
-        //$total = disk_total_space($this->_options['cache_dir']);
+        $free = disk_free_space($this->_options['cache_dir']);
+        $total = disk_total_space($this->_options['cache_dir']);
         if ($total == 0) {
             Zend_Cache::throwException('can\'t get disk_total_space');
         } else {

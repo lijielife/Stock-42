@@ -24,7 +24,7 @@
 /**
  * @see Zend_Filter_Interface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Filter/Interface.php';
+require_once 'Zend/Filter/Interface.php';
 
 
 /**

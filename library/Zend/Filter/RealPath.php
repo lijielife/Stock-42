@@ -16,13 +16,13 @@
  * @package    Zend_Filter
  * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: cleanPath.php 23775 2011-03-01 17:25:24Z ralph $
+ * @version    $Id: RealPath.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
 /**
  * @see Zend_Filter_Interface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Filter/Interface.php';
+require_once 'Zend/Filter/Interface.php';
 
 /**
  * @category   Zend
@@ -30,7 +30,7 @@ require_once PHP_LIBRARY_PATH.'Zend/Filter/Interface.php';
  * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
-class Zend_Filter_cleanPath implements Zend_Filter_Interface
+class Zend_Filter_RealPath implements Zend_Filter_Interface
 {
     /**
      * @var boolean $_pathExists
@@ -63,7 +63,7 @@ class Zend_Filter_cleanPath implements Zend_Filter_Interface
      * FALSE when not existing paths can be given
      *
      * @param boolean|Zend_Config $exists Path must exist
-     * @return Zend_Filter_cleanPath
+     * @return Zend_Filter_RealPath
      */
     public function setExists($exists)
     {
@@ -84,7 +84,7 @@ class Zend_Filter_cleanPath implements Zend_Filter_Interface
     /**
      * Defined by Zend_Filter_Interface
      *
-     * Returns cleanPath($value)
+     * Returns realpath($value)
      *
      * @param  string $value
      * @return string
@@ -93,12 +93,12 @@ class Zend_Filter_cleanPath implements Zend_Filter_Interface
     {
         $path = (string) $value;
         if ($this->_exists) {
-            return cleanPath($path);
+            return realpath($path);
         }
 
-        $cleanPath = @cleanPath($path);
-        if ($cleanPath) {
-            return $cleanPath;
+        $realpath = @realpath($path);
+        if ($realpath) {
+            return $realpath;
         }
 
         $drive = '';

@@ -23,12 +23,12 @@
 /**
  * @see Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/WindowsAzure/RetryPolicy/RetryPolicyAbstract.php';
+require_once 'Zend/Service/WindowsAzure/RetryPolicy/RetryPolicyAbstract.php';
 
 /**
  * @see Zend_Service_WindowsAzure_RetryPolicy_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/WindowsAzure/RetryPolicy/Exception.php';
+require_once 'Zend/Service/WindowsAzure/RetryPolicy/Exception.php';
 
 /**
  * @category   Zend
@@ -84,8 +84,8 @@ class Zend_Service_WindowsAzure_RetryPolicy_RetryN extends Zend_Service_WindowsA
                 if ($retriesLeft == 1) {
                     throw new Zend_Service_WindowsAzure_RetryPolicy_Exception("Exceeded retry count of " . $this->_retryCount . ". " . $ex->getMessage());
                 }
-				//TODO:trouver
-                //usleep($this->_retryInterval * 1000);
+
+                usleep($this->_retryInterval * 1000);
             }
         }
     }

@@ -24,7 +24,7 @@
 /**
  * @see Zend_Auth_Storage_Interface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Auth/Storage/Interface.php';
+require_once 'Zend/Auth/Storage/Interface.php';
 
 
 /**

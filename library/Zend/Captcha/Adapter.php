@@ -20,7 +20,7 @@
  */
 
 /** @see Zend_Validate_Interface */
-require_once PHP_LIBRARY_PATH.'Zend/Validate/Interface.php';
+require_once 'Zend/Validate/Interface.php';
 
 /**
  * Generic Captcha adapter interface

@@ -23,12 +23,12 @@
 /**
  * @see Zend_Tool_Framework_Loader_Abstract
  */
-require_once PHP_LIBRARY_PATH.'Zend/Tool/Framework/Loader/Abstract.php';
+require_once 'Zend/Tool/Framework/Loader/Abstract.php';
 
 /**
  * @see Zend_Tool_Framework_Loader_IncludePathLoader_RecursiveFilterIterator
  */
-require_once PHP_LIBRARY_PATH.'Zend/Tool/Framework/Loader/IncludePathLoader/RecursiveFilterIterator.php';
+require_once 'Zend/Tool/Framework/Loader/IncludePathLoader/RecursiveFilterIterator.php';
 
 /**
  * @category   Zend
@@ -46,7 +46,7 @@ class Zend_Tool_Framework_Loader_IncludePathLoader extends Zend_Tool_Framework_L
      */
     protected function _getFiles()
     {
-        require_once PHP_LIBRARY_PATH.'Zend/Loader.php';
+        require_once 'Zend/Loader.php';
         $paths = Zend_Loader::explodeIncludePath();
 
         // used for checking similarly named files
@@ -64,7 +64,7 @@ class Zend_Tool_Framework_Loader_IncludePathLoader extends Zend_Tool_Framework_L
                 continue;
             }
 
-            $realIncludePath = cleanPath($path);
+            $realIncludePath = realpath($path);
 
             // ensure that we only traverse a single version of Zend Framework on all include paths
             if (file_exists($realIncludePath . '/Zend/Tool/Framework/Loader/IncludePathLoader.php')) {
@@ -97,7 +97,7 @@ class Zend_Tool_Framework_Loader_IncludePathLoader extends Zend_Tool_Framework_L
                 }
 
                 // ensure that the same named file from separate include_paths is not loaded
-                $relativeItem = preg_replace('#^' . preg_quote($realIncludePath . DIRECTORY_SEPARATOR, '#') . '#', '', $item->getcleanPath());
+                $relativeItem = preg_replace('#^' . preg_quote($realIncludePath . DIRECTORY_SEPARATOR, '#') . '#', '', $item->getRealPath());
 
                 // no links allowed here for now
                 if ($item->isLink()) {
@@ -110,7 +110,7 @@ class Zend_Tool_Framework_Loader_IncludePathLoader extends Zend_Tool_Framework_L
                 }
 
                 $relativeItems[] = $relativeItem;
-                $files[] = $item->getcleanPath();
+                $files[] = $item->getRealPath();
             }
         }
 

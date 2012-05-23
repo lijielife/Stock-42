@@ -23,12 +23,12 @@
 /**
  * @see Zend_Gdata_Entry
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Entry.php';
+require_once 'Zend/Gdata/Entry.php';
 
 /**
  * @see Zend_Gdata_Extension
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Extension.php';
+require_once 'Zend/Gdata/Extension.php';
 
 
 /**

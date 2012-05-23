@@ -19,7 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-require_once PHP_LIBRARY_PATH.'Zend/Http/UserAgent/Desktop.php';
+require_once 'Zend/Http/UserAgent/Desktop.php';
 
 /**
  * Offline browser type matcher

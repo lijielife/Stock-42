@@ -24,7 +24,7 @@
 /**
  * @see Zend_Gdata_Feed
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Feed.php';
+require_once 'Zend/Gdata/Feed.php';
 
 /**
  * Describes a Book Search volume feed

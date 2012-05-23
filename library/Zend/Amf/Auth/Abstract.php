@@ -20,7 +20,7 @@
  */
 
 /** @see Zend_Auth_Adapter_Interface */
-require_once PHP_LIBRARY_PATH.'Zend/Auth/Adapter/Interface.php';
+require_once 'Zend/Auth/Adapter/Interface.php';
 
 /**
  * Base abstract class for AMF authentication implementation

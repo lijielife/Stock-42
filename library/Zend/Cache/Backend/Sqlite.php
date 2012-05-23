@@ -24,12 +24,12 @@
 /**
  * @see Zend_Cache_Backend_Interface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Cache/Backend/ExtendedInterface.php';
+require_once 'Zend/Cache/Backend/ExtendedInterface.php';
 
 /**
  * @see Zend_Cache_Backend
  */
-require_once PHP_LIBRARY_PATH.'Zend/Cache/Backend.php';
+require_once 'Zend/Cache/Backend.php';
 
 /**
  * @package    Zend_Cache
@@ -368,9 +368,8 @@ class Zend_Cache_Backend_Sqlite extends Zend_Cache_Backend implements Zend_Cache
      */
     public function getFillingPercentage()
     {
-    	//TODO:trouver
-        //$dir = dirname($this->_options['cache_db_complete_path']);
-        //$free = disk_free_space($dir);
+        $dir = dirname($this->_options['cache_db_complete_path']);
+        $free = disk_free_space($dir);
         $total = disk_total_space($dir);
         if ($total == 0) {
             Zend_Cache::throwException('can\'t get disk_total_space');

@@ -25,13 +25,13 @@
 /**
  * @see Zend_Service_Yahoo_ResultSet
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/Yahoo/ResultSet.php';
+require_once 'Zend/Service/Yahoo/ResultSet.php';
 
 
 /**
  * @see Zend_Service_Yahoo_NewsResult
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/Yahoo/NewsResult.php';
+require_once 'Zend/Service/Yahoo/NewsResult.php';
 
 
 /**

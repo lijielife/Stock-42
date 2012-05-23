@@ -23,7 +23,7 @@
 /**
  * @var Zend_XmlRpc_Generator_GeneratorAbstract
  */
-require_once PHP_LIBRARY_PATH.'Zend/XmlRpc/Generator/GeneratorAbstract.php';
+require_once 'Zend/XmlRpc/Generator/GeneratorAbstract.php';
 
 /**
  * XML generator adapter based on XMLWriter

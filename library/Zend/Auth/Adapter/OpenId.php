@@ -24,13 +24,13 @@
 /**
  * @see Zend_Auth_Adapter_Interface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Auth/Adapter/Interface.php';
+require_once 'Zend/Auth/Adapter/Interface.php';
 
 
 /**
  * @see Zend_OpenId_Consumer
  */
-require_once PHP_LIBRARY_PATH.'Zend/OpenId/Consumer.php';
+require_once 'Zend/OpenId/Consumer.php';
 
 
 /**

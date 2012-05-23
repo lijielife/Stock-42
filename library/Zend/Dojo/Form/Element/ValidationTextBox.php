@@ -20,7 +20,7 @@
  */
 
 /** Zend_Dojo_Form_Element_TextBox */
-require_once PHP_LIBRARY_PATH.'Zend/Dojo/Form/Element/TextBox.php';
+require_once 'Zend/Dojo/Form/Element/TextBox.php';
 
 /**
  * ValidationTextBox dijit

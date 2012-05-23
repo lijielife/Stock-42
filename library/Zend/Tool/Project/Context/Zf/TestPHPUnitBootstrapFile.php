@@ -23,7 +23,7 @@
 /**
  * @see Zend_Tool_Project_Context_Filesystem_File
  */
-require_once PHP_LIBRARY_PATH.'Zend/Tool/Project/Context/Filesystem/File.php';
+require_once 'Zend/Tool/Project/Context/Filesystem/File.php';
 
 /**
  * This class is the front most class for utilizing Zend_Tool_Project
@@ -65,7 +65,7 @@ class Zend_Tool_Project_Context_Zf_TestPHPUnitBootstrapFile extends Zend_Tool_Pr
             'body' => <<<EOS
 // Define path to application directory
 defined('APPLICATION_PATH')
-    || define('APPLICATION_PATH', cleanPath(dirname(__FILE__) . '/../application'));
+    || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
 
 // Define application environment
 defined('APPLICATION_ENV')
@@ -73,11 +73,11 @@ defined('APPLICATION_ENV')
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
-    cleanPath(APPLICATION_PATH . '/../library'),
+    realpath(APPLICATION_PATH . '/../library'),
     get_include_path(),
 )));
 
-require_once PHP_LIBRARY_PATH.'Zend/Loader/Autoloader.php';
+require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance();
 
 EOS

@@ -21,7 +21,7 @@
  */
 
 /** @see Zend_Amf_Request */
-require_once PHP_LIBRARY_PATH.'Zend/Amf/Request.php';
+require_once 'Zend/Amf/Request.php';
 
 /**
  * AMF Request object -- Request via HTTP

@@ -21,7 +21,7 @@
  */
 
 /** Zend_Service_StrikeIron_Base */
-require_once PHP_LIBRARY_PATH.'Zend/Service/StrikeIron/Base.php';
+require_once 'Zend/Service/StrikeIron/Base.php';
 
 /**
  * @category   Zend

@@ -24,12 +24,12 @@
 /**
  * @see Zend_Gdata_App_Extension
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/App/Extension.php';
+require_once 'Zend/Gdata/App/Extension.php';
 
 /**
  * @see Zend_Gdata_App_Extension_Draft
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/App/Extension/Draft.php';
+require_once 'Zend/Gdata/App/Extension/Draft.php';
 
 /**
  * Represents the app:control element

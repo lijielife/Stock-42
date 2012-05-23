@@ -23,7 +23,7 @@
 /**
  * @see Zend_Tool_Framework_Client_Storage_AdapterInterface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Tool/Framework/Client/Storage/AdapterInterface.php';
+require_once 'Zend/Tool/Framework/Client/Storage/AdapterInterface.php';
 
 /**
  * @category   Zend

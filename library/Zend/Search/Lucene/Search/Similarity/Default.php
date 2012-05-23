@@ -22,7 +22,7 @@
 
 
 /** Zend_Search_Lucene_Search_Similarity */
-require_once PHP_LIBRARY_PATH.'Zend/Search/Lucene/Search/Similarity.php';
+require_once 'Zend/Search/Lucene/Search/Similarity.php';
 
 
 /**

@@ -24,7 +24,7 @@
 /**
  * @see Zend_Auth_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Auth/Exception.php';
+require_once 'Zend/Auth/Exception.php';
 
 
 /**

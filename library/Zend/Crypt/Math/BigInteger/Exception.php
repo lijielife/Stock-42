@@ -23,7 +23,7 @@
 /**
  * @see Zend_Crypt_Math_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Crypt/Math/Exception.php';
+require_once 'Zend/Crypt/Math/Exception.php';
 
 /**
  * @category   Zend

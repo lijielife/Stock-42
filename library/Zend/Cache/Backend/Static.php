@@ -23,12 +23,12 @@
 /**
  * @see Zend_Cache_Backend_Interface
  */
-require_once PHP_LIBRARY_PATH.'Zend/Cache/Backend/Interface.php';
+require_once 'Zend/Cache/Backend/Interface.php';
 
 /**
  * @see Zend_Cache_Backend
  */
-require_once PHP_LIBRARY_PATH.'Zend/Cache/Backend.php';
+require_once 'Zend/Cache/Backend.php';
 
 /**
  * @package    Zend_Cache
@@ -222,7 +222,7 @@ class Zend_Cache_Backend_Static
             $fileName = $this->_options['index_filename'];
         }
 
-        $pathName = cleanPath($this->_options['public_dir']) . dirname($id);
+        $pathName = realpath($this->_options['public_dir']) . dirname($id);
         $this->_createDirectoriesFor($pathName);
 
         if ($id === null || strlen($id) == 0) {
@@ -312,7 +312,7 @@ class Zend_Cache_Backend_Static
             $fileName = $this->_options['index_filename'];
         }
         $pathName = $this->_options['public_dir'] . dirname($id);
-        $file     = cleanPath($pathName) . '/' . $fileName . $extension;
+        $file     = realpath($pathName) . '/' . $fileName . $extension;
         if (!file_exists($file)) {
             return false;
         }
@@ -490,8 +490,8 @@ class Zend_Cache_Backend_Static
      */
     protected function _verifyPath($path)
     {
-        $path = cleanPath($path);
-        $base = cleanPath($this->_options['public_dir']);
+        $path = realpath($path);
+        $base = realpath($this->_options['public_dir']);
         return strncmp($path, $base, strlen($base)) !== 0;
     }
 

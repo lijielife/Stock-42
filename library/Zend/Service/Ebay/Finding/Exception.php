@@ -23,7 +23,7 @@
 /**
  * @see Zend_Service_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/Ebay/Exception.php';
+require_once 'Zend/Service/Ebay/Exception.php';
 
 /**
  * @category   Zend

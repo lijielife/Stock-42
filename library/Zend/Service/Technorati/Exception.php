@@ -24,7 +24,7 @@
 /**
  * @see Zend_Service_Exception
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/Exception.php';
+require_once 'Zend/Service/Exception.php';
 
 
 /**

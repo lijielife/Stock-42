@@ -21,7 +21,7 @@
 
 
 /** Zend_Pdf_Filter_Interface */
-require_once PHP_LIBRARY_PATH.'Zend/Pdf/Filter/Interface.php';
+require_once 'Zend/Pdf/Filter/Interface.php';
 
 /**
  * RunLength stream filter

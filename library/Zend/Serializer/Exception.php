@@ -20,7 +20,7 @@
  */
 
 /** @see Zend_Exception */
-require_once PHP_LIBRARY_PATH.'Zend/Exception.php';
+require_once 'Zend/Exception.php';
 
 /**
  * @category   Zend

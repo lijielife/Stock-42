@@ -21,7 +21,7 @@
  */
 
 /** Zend_Pdf_Action */
-require_once PHP_LIBRARY_PATH.'Zend/Pdf/Action.php';
+require_once 'Zend/Pdf/Action.php';
 
 
 /**

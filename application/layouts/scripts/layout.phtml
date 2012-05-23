@@ -32,7 +32,7 @@
 // 	}
 
 	//bare de coté pour les menus
-	$oSideBar = new Projet_Xml('sidebar');
+	$oSideBar = new Projet_Xml('div');
 	$oSideBar->setAttr('id', 'sidebar');
 	//mise en place du logo
 	$oLogo = new Projet_Xml('span');
@@ -49,8 +49,12 @@
 	echo $oTopTitre;
 	
 	//creation de l'élément principal de contenu
-	$oArticle = new Projet_Xml('article');
+	$oArticle = new Projet_Xml('div');
 	$oArticle->setAttr('id', 'article');
 	$oArticle->append($this->layout()->content);
+	
+	$oMessages = new Projet_Xml('div');
+	$oMessages->setAttr('id', 'messages');
+	$oMessages->append($this->parseMessages($this->messages));
 	
 	echo $oArticle;

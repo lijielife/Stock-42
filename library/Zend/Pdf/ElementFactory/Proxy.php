@@ -20,7 +20,7 @@
  */
 
 /** Zend_Pdf_ElementFactory_Interface */
-require_once PHP_LIBRARY_PATH.'Zend/Pdf/ElementFactory/Interface.php';
+require_once 'Zend/Pdf/ElementFactory/Interface.php';
 
 /**
  * PDF element factory interface.

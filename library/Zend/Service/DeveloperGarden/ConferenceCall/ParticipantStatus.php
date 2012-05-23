@@ -23,7 +23,7 @@
 /**
  * @see Zend_Validate_Ip
  */
-require_once PHP_LIBRARY_PATH.'Zend/Validate/Ip.php';
+require_once 'Zend/Validate/Ip.php';
 
 /**
  * @category   Zend

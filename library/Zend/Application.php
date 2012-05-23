@@ -76,12 +76,12 @@ class Zend_Application
     public function __construct($environment, $options = null)
     {
         $this->_environment = (string) $environment;
-        require_once PHP_LIBRARY_PATH.'Zend/Loader/Autoloader.php';
+
+        require_once 'Zend/Loader/Autoloader.php';
         $this->_autoloader = Zend_Loader_Autoloader::getInstance();
-        
+
         if (null !== $options) {
             if (is_string($options)) {
-            	//marche pas ici 
                 $options = $this->_loadConfig($options);
             } elseif ($options instanceof Zend_Config) {
                 $options = $options->toArray();
@@ -262,7 +262,7 @@ class Zend_Application
         foreach ($settings as $key => $value) {
             $key = empty($prefix) ? $key : $prefix . $key;
             if (is_scalar($value)) {
-                //ini_set($key, $value);
+                ini_set($key, $value);
             } elseif (is_array($value)) {
                 $this->setPhpSettings($value, $key . '.');
             }
@@ -280,8 +280,7 @@ class Zend_Application
     public function setIncludePaths(array $paths)
     {
         $path = implode(PATH_SEPARATOR, $paths);
-        //TODO:trouver trouver
-        //set_include_path($path . PATH_SEPARATOR . get_include_path());
+        set_include_path($path . PATH_SEPARATOR . get_include_path());
         return $this;
     }
 
@@ -318,7 +317,7 @@ class Zend_Application
         }
 
         if (!class_exists($class, false)) {
-            require_once PHP_LIBRARY_PATH.$path;
+            require_once $path;
             if (!class_exists($class, false)) {
                 throw new Zend_Application_Exception('Bootstrap class not found');
             }
@@ -377,16 +376,13 @@ class Zend_Application
     protected function _loadConfig($file)
     {
         $environment = $this->getEnvironment();
-       
         $suffix      = pathinfo($file, PATHINFO_EXTENSION);
-        
         $suffix      = ($suffix === 'dist')
                      ? pathinfo(basename($file, ".$suffix"), PATHINFO_EXTENSION)
                      : $suffix;
-        
+
         switch (strtolower($suffix)) {
             case 'ini':
-            	//marche pas ici
                 $config = new Zend_Config_Ini($file, $environment);
                 break;
 

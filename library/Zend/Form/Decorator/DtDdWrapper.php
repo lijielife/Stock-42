@@ -20,7 +20,7 @@
  */
 
 /** Zend_Form_Decorator_Abstract */
-require_once PHP_LIBRARY_PATH.'Zend/Form/Decorator/Abstract.php';
+require_once 'Zend/Form/Decorator/Abstract.php';
 
 /**
  * Zend_Form_Decorator_DtDdWrapper

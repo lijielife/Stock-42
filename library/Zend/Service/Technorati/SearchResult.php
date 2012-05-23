@@ -24,7 +24,7 @@
 /**
  * @see Zend_Service_Technorati_Result
  */
-require_once PHP_LIBRARY_PATH.'Zend/Service/Technorati/Result.php';
+require_once 'Zend/Service/Technorati/Result.php';
 
 
 /**

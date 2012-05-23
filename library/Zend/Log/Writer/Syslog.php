@@ -21,10 +21,10 @@
  */
 
 /** Zend_Log */
-require_once PHP_LIBRARY_PATH.'Zend/Log.php';
+require_once 'Zend/Log.php';
 
 /** Zend_Log_Writer_Abstract */
-require_once PHP_LIBRARY_PATH.'Zend/Log/Writer/Abstract.php';
+require_once 'Zend/Log/Writer/Abstract.php';
 
 /**
  * Writes log messages to syslog
@@ -174,8 +174,7 @@ class Zend_Log_Writer_Syslog extends Zend_Log_Writer_Abstract
     {
         self::$_lastApplication = $this->_application;
         self::$_lastFacility    = $this->_facility;
-        //TODO:trouver
-        //openlog($this->_application, LOG_PID, $this->_facility);
+        openlog($this->_application, LOG_PID, $this->_facility);
     }
 
     /**
@@ -196,14 +195,14 @@ class Zend_Log_Writer_Syslog extends Zend_Log_Writer_Abstract
         }
 
         if (!in_array($facility, $this->_validFacilities)) {
-            require_once PHP_LIBRARY_PATH.'Zend/Log/Exception.php';
+            require_once 'Zend/Log/Exception.php';
             throw new Zend_Log_Exception('Invalid log facility provided; please see http://php.net/openlog for a list of valid facility values');
         }
 
         if ('WIN' == strtoupper(substr(PHP_OS, 0, 3))
             && ($facility !== LOG_USER)
         ) {
-            require_once PHP_LIBRARY_PATH.'Zend/Log/Exception.php';
+            require_once 'Zend/Log/Exception.php';
             throw new Zend_Log_Exception('Only LOG_USER is a valid log facility on Windows');
         }
 
@@ -235,8 +234,7 @@ class Zend_Log_Writer_Syslog extends Zend_Log_Writer_Abstract
      */
     public function shutdown()
     {
-    	//TODO:trouver
-        //closelog();
+        closelog();
     }
 
     /**

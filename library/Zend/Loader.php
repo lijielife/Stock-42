@@ -56,7 +56,7 @@ class Zend_Loader
         }
 
         if ((null !== $dirs) && !is_string($dirs) && !is_array($dirs)) {
-            require_once PHP_LIBRARY_PATH.'Zend/Exception.php';
+            require_once 'Zend/Exception.php';
             throw new Zend_Exception('Directory argument must be a string or an array');
         }
 
@@ -95,7 +95,7 @@ class Zend_Loader
         }
 
         if (!class_exists($class, false) && !interface_exists($class, false)) {
-            require_once PHP_LIBRARY_PATH.'Zend/Exception.php';
+            require_once 'Zend/Exception.php';
             throw new Zend_Exception("File \"$file\" does not exist or class \"$class\" was not found in the file");
         }
     }
@@ -136,8 +136,7 @@ class Zend_Loader
                 $dirs = implode(PATH_SEPARATOR, $dirs);
             }
             $incPath = get_include_path();
-            //TODO:trouver trouver
-            //set_include_path($dirs . PATH_SEPARATOR . $incPath);
+            set_include_path($dirs . PATH_SEPARATOR . $incPath);
         }
 
         /**
@@ -153,7 +152,6 @@ class Zend_Loader
          * If searching in directories, reset include_path
          */
         if ($incPath) {
-        	//TODO:trouver trouver
             set_include_path($incPath);
         }
 
@@ -266,7 +264,7 @@ class Zend_Loader
     public static function registerAutoload($class = 'Zend_Loader', $enabled = true)
     {
         trigger_error(__CLASS__ . '::' . __METHOD__ . ' is deprecated as of 1.8.0 and will be removed with 2.0.0; use Zend_Loader_Autoloader instead', E_USER_NOTICE);
-        require_once PHP_LIBRARY_PATH.'Zend/Loader/Autoloader.php';
+        require_once 'Zend/Loader/Autoloader.php';
         $autoloader = Zend_Loader_Autoloader::getInstance();
         $autoloader->setFallbackAutoloader(true);
 
@@ -274,7 +272,7 @@ class Zend_Loader
             self::loadClass($class);
             $methods = get_class_methods($class);
             if (!in_array('autoload', (array) $methods)) {
-                require_once PHP_LIBRARY_PATH.'Zend/Exception.php';
+                require_once 'Zend/Exception.php';
                 throw new Zend_Exception("The class \"$class\" does not have an autoload() method");
             }
 
@@ -301,7 +299,7 @@ class Zend_Loader
          * Security check
          */
         if (preg_match('/[^a-z0-9\\/\\\\_.:-]/i', $filename)) {
-            require_once PHP_LIBRARY_PATH.'Zend/Exception.php';
+            require_once 'Zend/Exception.php';
             throw new Zend_Exception('Security check: Illegal character in filename');
         }
     }

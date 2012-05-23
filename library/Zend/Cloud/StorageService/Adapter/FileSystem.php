@@ -17,8 +17,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-require_once PHP_LIBRARY_PATH.'Zend/Cloud/StorageService/Adapter.php';
-require_once PHP_LIBRARY_PATH.'Zend/Cloud/StorageService/Exception.php';
+require_once 'Zend/Cloud/StorageService/Adapter.php';
+require_once 'Zend/Cloud/StorageService/Exception.php';
 
 /**
  * FileSystem adapter for unstructured cloud storage.
@@ -62,7 +62,7 @@ class Zend_Cloud_StorageService_Adapter_FileSystem implements Zend_Cloud_Storage
         if (isset($options[self::LOCAL_DIRECTORY])) {
             $this->_directory = $options[self::LOCAL_DIRECTORY];
         } else {
-            $this->_directory = cleanPath(sys_get_temp_dir());
+            $this->_directory = realpath(sys_get_temp_dir());
         }
     }
 
@@ -78,7 +78,7 @@ class Zend_Cloud_StorageService_Adapter_FileSystem implements Zend_Cloud_Storage
     public function fetchItem($path, $options = array())
     {
         $filepath = $this->_getFullPath($path);
-        $path     = cleanPath($filepath);
+        $path     = realpath($filepath);
 
         if (!$path) {
             return false;
@@ -211,7 +211,7 @@ class Zend_Cloud_StorageService_Adapter_FileSystem implements Zend_Cloud_Storage
         $fullPath = $this->_getFullPath($path);
         $metadata = null;
         if (file_exists($fullPath)) {
-            $metadata = stat(cleanPath($fullPath));
+            $metadata = stat(realpath($fullPath));
         }
 
         return isset($metadata) ? $metadata : false;
@@ -228,7 +228,7 @@ class Zend_Cloud_StorageService_Adapter_FileSystem implements Zend_Cloud_Storage
      */
     public function storeMetadata($destinationPath, $metadata, $options = array())
     {
-        require_once PHP_LIBRARY_PATH.'Zend/Cloud/OperationNotAvailableException.php';
+        require_once 'Zend/Cloud/OperationNotAvailableException.php';
         throw new Zend_Cloud_OperationNotAvailableException('Storing metadata not implemented');
     }
 
@@ -241,7 +241,7 @@ class Zend_Cloud_StorageService_Adapter_FileSystem implements Zend_Cloud_Storage
      */
     public function deleteMetadata($path)
     {
-        require_once PHP_LIBRARY_PATH.'Zend/Cloud/OperationNotAvailableException.php';
+        require_once 'Zend/Cloud/OperationNotAvailableException.php';
         throw new Zend_Cloud_OperationNotAvailableException('Deleting metadata not implemented');
     }
 

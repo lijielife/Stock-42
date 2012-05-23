@@ -15,7 +15,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	 */
 	protected $env;
 
-
+	protected function _initConstantes() {
+		Application_Service_Constantes::css();
+	}
 	/**
 	 * Initialise l'environnement, la racine et la configuration.
 	 */
@@ -218,7 +220,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
 										  
 		// Les styles globaux
-		$oViewRenderer->view->headLink()->appendStylesheet(STYLES_PATH.'/base.css');
+		$oViewRenderer->view->headLink()->appendStylesheet(STYLES_PATH.'/base.css')
+										->appendStylesheet(STYLES_PATH.'/form.css');
 
 		// Initialise le menu Zend_Navigation qui n'existe pas par défaut
 		//$aMenu = $this->getOption('navigation');

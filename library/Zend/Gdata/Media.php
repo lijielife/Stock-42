@@ -24,7 +24,7 @@
 /**
  * @see Zend_Gdata
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata.php';
+require_once 'Zend/Gdata.php';
 
 /**
  * Service class for interacting with the services which use the media extensions

@@ -21,7 +21,7 @@
  */
 
 /** Zend_Loader */
-require_once PHP_LIBRARY_PATH.'Zend/Loader.php';
+require_once 'Zend/Loader.php';
 
 /**
  * Autoloader stack and namespace autoloader
@@ -265,12 +265,10 @@ class Zend_Loader_Autoloader
         }
 
         $this->_zfPath = $this->_getVersionPath($path, $version);
-        
-        //TODO:trouver trouver
-        //set_include_path(implode(PATH_SEPARATOR, array(
-        //  $this->_zfPath,
-        //    get_include_path(),
-        //)));
+        set_include_path(implode(PATH_SEPARATOR, array(
+            $this->_zfPath,
+            get_include_path(),
+        )));
         return $this;
     }
 

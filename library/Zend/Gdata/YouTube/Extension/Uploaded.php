@@ -24,7 +24,7 @@
 /**
  * @see Zend_Gdata_Extension
  */
-require_once PHP_LIBRARY_PATH.'Zend/Gdata/Extension.php';
+require_once 'Zend/Gdata/Extension.php';
 
 /**
  * Represents the yt:uploaded element
