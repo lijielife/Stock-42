@@ -67,6 +67,9 @@ class AuthController extends Projet_Controller_Action {
 		$this->_helper->redirector->gotoRoute(array(), 'main-login'); // back to login page
 	}
 	
+	public function resumeloginAction() {
+		
+	}
 	public function ajouterutilisateurAction() {
 		
 	} 

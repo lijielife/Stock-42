@@ -17,8 +17,8 @@ body {
 	font-family			: 'Calibri', sans-serif;
 	font-size			: 14px;
 	color				: #333333;
-	height				: 100%;
-	width				: 100%;
+/* 	height				: 100%; */
+/* 	width				: 100%; */
 }
 
 
@@ -84,7 +84,8 @@ a:hover {
 	top					: 0;
 	padding				: 1em 2em;
 	color				: rgb(200,200,255);
-	-moz-border-radius	: 1.5em;
+	-moz-border-radius	: 0 0 1.5em 1.5em;
+	height				: 7%;
 	background-image	: -moz-linear-gradient(top center, grey 0%, rgba(34,34,34,0.9) 73%, rgba(34,34,35,0.7) 100%);
 }
 
@@ -199,14 +200,16 @@ a:hover {
 
 /* article */
 #article {
-	position	: fixed;
-	left		: 17%;
-	width		: 90%;
-	top			: 10%;
-	height		: 100%;
-	overflow	: auto;
-	padding		: 1em;
-	margin		: 2px;
+	position			: fixed;
+	left				: 17%;
+	width				: 79%;
+	top					: 15%;
+	height				: 100%;
+	overflow			: auto;
+	padding				: 1em;
+	margin				: 2px;
+	-moz-box-shadow		: rgba(220,212,222, 0.75) 0px 0px 4px 6px;
+	-moz-border-radius	: 7px;
 }
 
 #footer {

@@ -7,7 +7,7 @@ class Layout_Helper_LoginZone extends Zend_View_Helper_Abstract {
 			return "aucune indentite";
 		}
 		$oIdent = (array) $oIdent;
-		return $oIdent['NOM'].", ".$oIdent['PRENOM'];
+		return $oIdent['NOM']." ".$oIdent['PRENOM'];
 	}
 	
 	
