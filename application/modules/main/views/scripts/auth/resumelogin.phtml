@@ -1,0 +1,10 @@
+<?php
+if ($this->aIdent !== null) {
+	$this->placeholder('TitreHaut')->set("Echec de l'Identification");
+} else {
+	$this->placeholder('TitreHaut')->set("Connexion Réussite");
+}
+
+echo $this->dispArray($this->aIdent);
+?>
+<button onclick="self.location.href='/fr/accueil'">Valider</button>

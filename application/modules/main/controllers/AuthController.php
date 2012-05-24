@@ -55,7 +55,7 @@ class AuthController extends Projet_Controller_Action {
 		}
 		$auth->getStorage()->write($adapter->getResultRowObject(null, 'MDP'));
 		// We're authenticated! Redirect to the home page
-		$this->_helper->redirector->gotoRoute(array(), 'main-accueil');
+		$this->_helper->redirector->gotoRoute(array(), 'main-resumelogin');
 	}
 	
 	public function getLoginForm() {
@@ -68,7 +68,10 @@ class AuthController extends Projet_Controller_Action {
 	}
 	
 	public function resumeloginAction() {
-		
+		//vérification
+		if(Zend_Auth::getInstance()->hasIdentity()) {
+			$this->view->aIdent = (array) Zend_Auth::getInstance()->getIdentity();
+		}
 	}
 	public function ajouterutilisateurAction() {
 		

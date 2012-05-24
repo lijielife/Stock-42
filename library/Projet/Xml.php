@@ -11,9 +11,9 @@ class Projet_Xml {
 	const PREPEND = 'prepend';
 	const APPEND = 'append';
 	
-	public function __construct($sNom, $aAttrs = array(), $xContent = '') {
+	public function __construct($sNom, array $aAttrs = array(), $xContent = '') {
 		$this->setNom($sNom);
-		$this->setAttrs($aAttrs);
+		$this->setAttrs((array) $aAttrs);
 		$this->append($xContent);
 	}
 
@@ -75,7 +75,7 @@ class Projet_Xml {
 		$this->attrs[strtolower($sAttr)] = htmlspecialchars($sVal);
 	}
 
-	public function setAttrs ($aAttrs) {
+	public function setAttrs (array $aAttrs) {
 		$this->attrs = $aAttrs;
 	}
 

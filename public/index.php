@@ -5,7 +5,7 @@
  */
 
 // Define path to root directory
-defined('ROOT_PATH')		|| define('ROOT_PATH', cleanPath(dirname(__FILE__).'/../') );
+defined('ROOT_PATH')		|| define('ROOT_PATH', realpath(dirname(__FILE__).'/../') );
 //define('ROOT_PATH', '.');
 
 // Define path to public directory

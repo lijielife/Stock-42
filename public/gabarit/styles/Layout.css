@@ -86,6 +86,7 @@ a:hover {
 	color				: rgb(200,200,255);
 	-moz-border-radius	: 0 0 1.5em 1.5em;
 	height				: 7%;
+	max-height			: 3em;
 	background-image	: -moz-linear-gradient(top center, grey 0%, rgba(34,34,34,0.9) 73%, rgba(34,34,35,0.7) 100%);
 }
 
@@ -184,7 +185,7 @@ a:hover {
 }
 /*login*/
 
-#login {
+#zone-login {
 	position			: fixed;
 	top 				: 0;
 	right				: 0;
