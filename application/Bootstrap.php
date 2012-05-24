@@ -168,7 +168,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		Zend_Controller_Action_HelperBroker::addPath('helpers', 'Zend_Controller_Action_Helper');
 		// Projet_Controller_Action_Helper.
 		// Helper d'action de ZendX pour la completion de code dans les controllers.
-		//Zend_Controller_Action_HelperBroker::addPath('ZendX/JQuery/Controller/Action/Helper', 'ZendX_JQuery_Controller_Action_Helper');
+		Zend_Controller_Action_HelperBroker::addPath('ZendX/JQuery/Controller/Action/Helper', 'ZendX_JQuery_Controller_Action_Helper');
 	}
 
 	/**

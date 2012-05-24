@@ -1,0 +1,69 @@
+/*
+Css pour la personnalisation de l'apparence de l'objet table dans un contexte dataTable
+Ce css est envoyé avec l'appele au helper de vue liste
+*/
+
+/*
+ * correction de l'apparence du thead
+ */
+
+table.dataTable>thead>tr>th>div>span {
+	float		: left;
+}
+
+/*
+ * cachement de l'élément contenant l'id dans chaque ligne
+ */
+table.dataTable>tbody>tr .id {
+	display		: none;
+}
+
+/*
+ * Decoration des boutons d'edition
+ */
+td:last-child>a {
+	margin-right	: 0.5em;
+	margin-left		: 0.5em;
+	white-space		: nowrap;
+}
+
+a.helper-edit:hover, a.helper-suppr:hover {
+	background-color	: #297CB4;
+	-moz-border-radius	: 4px;
+}
+
+a.helper-edit, a.helper-suppr {
+	padding				: 2px;
+}
+
+td.LettreAlone {
+	text-align		: center;
+	font-size		: 1.5em;
+	white-space		: no-wrap;
+}
+
+td.LettreDouble {
+	text-align		: center;
+	font-size		: 1.4em;
+	white-space		: no-wrap;
+}
+
+td.UniteDouble {
+	text-align		: center;
+	white-space		: no-wrap;
+}
+td.DisplayName {
+	white-space		: nowrap;
+}
+	
+
+/*
+button.ajouter.DTTT_button.ajouter.ui-button.ui-state-default {
+	color: #AAFFAA !important;
+}
+
+button.ajouter  .plus {
+	color: #AAFFAA;
+	font-weight: 900;
+}
+*/

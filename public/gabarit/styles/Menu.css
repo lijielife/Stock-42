@@ -42,7 +42,6 @@
 .navigation>li {
 	margin			: 0;
 	border-radius	: 5px;
-	margin-left		: 1em;
 	margin-bottom	: 1em;
 	padding			: 10px 0px 0px 0px;
 	line-height		: normal;
@@ -88,7 +87,7 @@
 /* troisieme niveau */
 .navigation>li>ul {
 	padding				: 15px 0px 0px 0px;
-	margin-left			: 4em;
+	margin-left			: 1%;
 }
 
 .navigation>li>ul>li>a {
@@ -96,7 +95,7 @@
 }
 
 
-/* quatrieme niveau */
+/* quatrième niveau */
 .navigation>li>ul>li:not(.active) ul {
 	display			: none;
 }
@@ -109,6 +108,9 @@
 .navigation ul li a:last-child {
 	text-decoration	: none;
 	box-shadow		: 0px 0px 5px rgba(194,55,38,0.95);
+	padding			: 3px;
+	margin			: 4px !important;
+	line-height		: 1em;
 	border			: 1px solid rgb(194,55,38);
 	border-radius	: 5px;
 	margin			: 2px;

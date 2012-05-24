@@ -14,4 +14,7 @@ class Application_Service_Constantes {
 		define('CSS_ELEMENT_CLEAR_RIGHT', 'clearright');
 		define('CSS_FORM_CHAMP', 'champ');
 	}
+	
+	
+	
 }

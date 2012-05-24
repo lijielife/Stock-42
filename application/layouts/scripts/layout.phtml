@@ -1,10 +1,16 @@
 <?php
 	// Initialisation de la balise Doctype.
 	echo $this->doctype();
-	echo $this->headLink();
-	echo $this->headScript();
+	$oHead = new Projet_Xml('head');
+	$oHead->append(array($this->headLink(),
+						 $this->headMeta(),
+						 $this->headScript(),
+						 $this->headStyle(),
+						 $this->headTitle(),
+						 $this->jQuery()));
+	echo $oHead;
 	// On récupère l'éventuelle identité de la personne connectée.
-	//$oIdent = Zend_Auth::getInstance()->getIdentity();
+	$oIdent = Zend_Auth::getInstance()->getIdentity();
 
 	// Récupération de la langue en cours
 	//$local = Zend_Registry::get("Zend_Locale");
@@ -31,6 +37,9 @@
 // 		$oDivArticle->linkSymbol($oMessageDefault);
 // 	}
 
+	$oBody = new Projet_Xml('body');
+	
+
 	//bare de coté pour les menus
 	$oSideBar = new Projet_Xml('div');
 	$oSideBar->setAttr('id', 'sidebar');
@@ -39,14 +48,24 @@
 	$oSideBar->append($oLogo);
 	$oSideBar->append($this->navigation()->menu());
 	
-	echo $oSideBar;
+	$oBody->append($oSideBar);
+	
+	//zone pour l'identite du connecté
+	$oLogin = new Projet_Xml('div');
+	$oLogin->setAttr('id', 'login');
+	$oLogin->append($this->loginZone($oIdent));
+	
+	$oBody->append($oLogin);
+	
 	//création d'un endroit pour le titre de la page courante
 	$oTopTitre = new Projet_Xml('div');
 	$oTopTitre->setAttr('id', 'TitreHaut');
 	$oTitre = new Projet_Xml('h1');
 	$oTitre->append($this->placeholder('TitreHaut'));
 	$oTopTitre->append($oTitre);
-	echo $oTopTitre;
+	$oBody->append($oTopTitre);
+	
+	
 	
 	//creation de l'élément principal de contenu
 	$oArticle = new Projet_Xml('div');
@@ -57,4 +76,6 @@
 	$oMessages->setAttr('id', 'messages');
 	$oMessages->append($this->parseMessages($this->messages));
 	
-	echo $oArticle;
+	$oBody->append($oArticle);
+	
+	echo $oBody;

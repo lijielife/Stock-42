@@ -21,6 +21,7 @@ body {
 	width				: 100%;
 }
 
+
 strong {
 	color: #222222;
 }
@@ -180,6 +181,21 @@ a:hover {
 	background	: #B9B9B9;
 	color		: #000000;
 }
+/*login*/
+
+#login {
+	position			: fixed;
+	top 				: 0;
+	right				: 0;
+	margin				: 2px;
+	-moz-border-radius	: 0 0 5px 5px;
+	margin-top			: 0;
+	-moz-box-shadow		: rgba(220,212,222, 0.75) 0px 0px 4px 6px;
+	padding				: 3px;
+	background-image	: -moz-linear-gradient(top center, white 0%, grey 100%);
+/* 	TODO:Ameliorer */
+}
+
 
 /* article */
 #article {
