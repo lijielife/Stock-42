@@ -3,7 +3,7 @@
 class Projet_View_Helper_DispArray extends Zend_View_Helper_Abstract {
 	
 	private $_TRANSLATE = array('PRENOM'	=> 'Prénom',
-							  'NOM'		=> 'Nom',
+							  'NOM'			=> 'Nom',
 							  'DERNIERE_CONNEXION'	=> 'Date de la dernière connexion',
 							  'LOGIN'				=> "Nom d'utilisateur"
 							  );

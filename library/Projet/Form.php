@@ -19,7 +19,8 @@ class Projet_Form extends Zend_Form {
 		//on met la methode post par défault pour tous les formulaires
 		//on met l'enctype classique
 		$this->setMethod(parent::METHOD_POST)
-			 ->setEnctype(parent::ENCTYPE_URLENCODED);
+			 ->setEnctype(parent::ENCTYPE_URLENCODED)
+			 ->setAction('#');
 		
 		//on met le nom du formulaire passé en paramètre
 		$this->setName($name);
@@ -43,6 +44,21 @@ class Projet_Form extends Zend_Form {
 	protected function setDefaultDecorators() {
 		$this->setDecorators(array('FormElements', 'Form', 'FormErreurGlobale'));
 		//$this->setDecorators(array('Generic','Form'));
+	}
+	
+	protected function addSubmit($sText = 'Valider') {
+		$this->addElement($this->createSubmit($sText));
+	}
+	
+	protected function createSubmit($sText = 'Valider') {
+		$oSubmit = new Projet_Form_Element_Submit(self::SUBMIT);
+		$oSubmit->setLabel($sText);
+		return $oSubmit; 
+	}
+	
+	protected function addElementsWithSubmit(array $aElements, $sText = null) {
+		$this->addElements($aElements);
+		$this->addSubmit($sText);
 	}
 
 }

@@ -55,7 +55,7 @@ class AuthController extends Projet_Controller_Action {
 		}
 		$auth->getStorage()->write($adapter->getResultRowObject(null, 'MDP'));
 		// We're authenticated! Redirect to the home page
-		$this->_helper->redirector->gotoRoute(array(), 'main-resumelogin');
+		$this->_helper->redirector->gotoRoute(array(), 'main-accueil');
 	}
 	
 	public function getLoginForm() {

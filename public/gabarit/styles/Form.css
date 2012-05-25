@@ -16,18 +16,34 @@ form {
 	-moz-box-shadow		: rgba(220,212,222, 0.75) 0px 0px 4px 6px;
 }
 
+form.small {
+	max-width			: 30%;
+}
+
+form.medium {
+	max-width			: 50%;
+}
+
+form.large {
+	max-width			: 70%;
+}
+
 p.champ {
 	padding				: 5px;
 	margin				: 3px;
 	overflow			: hidden;
 }
 
-input:not([type=submit]) {
-	-moz-border-radius	: 3px;
-	border				: rgba(60,112,255, 0.8) 1px solid;
+input:not([type=submit]), select {
+	
 	line-height			: 1.2em;
 	margin-left			: 1em;
 	float				: right;
+}
+
+input:not([type=submit]) {
+	-moz-border-radius	: 3px;
+	border				: rgba(60,112,255, 0.8) 1px solid;
 }
 
 label {

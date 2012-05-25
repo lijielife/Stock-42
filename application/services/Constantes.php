@@ -13,6 +13,9 @@ class Application_Service_Constantes {
 		define('CSS_ELEMENT_CLEAR_LEFT', 'clearleft');
 		define('CSS_ELEMENT_CLEAR_RIGHT', 'clearright');
 		define('CSS_FORM_CHAMP', 'champ');
+		define('CSS_FORM_SMALL', 'small');
+		define('CSS_FORM_MEDIUM', 'medium');
+		define('CSS_FORM_LARGE', 'large');
 	}
 	
 	

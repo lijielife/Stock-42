@@ -121,7 +121,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$this->bootstrap('frontController');
 		$front = $this->getResource('frontController');
 		$view = $this->getResource('view');
-		//$front->registerPlugin(new Projet_Controller_Plugin_Translate($view));
+		$front->registerPlugin(new Projet_Controller_Plugin_Translate($view));
 	}
 
 	/**

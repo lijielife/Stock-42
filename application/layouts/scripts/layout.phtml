@@ -52,8 +52,10 @@
 	
 	//zone pour l'identite du connecté
 	$oLogin = new Projet_Xml('div');
-	$oLogin->setAttr('id', 'zone-login');
-	$oLogin->append($this->loginZone($oIdent));
+	$oLogin->setAttr('id','zone-login');
+	$oAncreLogin = new Projet_Xml('a',array('href' => '/fr/resume-connexion'));
+	$oAncreLogin->append($this->loginZone($oIdent));
+	$oLogin->append($oAncreLogin);
 	
 	$oBody->append($oLogin);
 	

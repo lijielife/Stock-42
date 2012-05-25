@@ -193,9 +193,13 @@ a:hover {
 	-moz-border-radius	: 0 0 5px 5px;
 	margin-top			: 0;
 	-moz-box-shadow		: rgba(220,212,222, 0.75) 0px 0px 4px 6px;
-	padding				: 3px;
+	padding				: 3px 6px;
 	background-image	: -moz-linear-gradient(top center, white 0%, grey 100%);
 /* 	TODO:Ameliorer */
+}
+
+#zone-login a {
+	text-decoration		: none;
 }
 
 
