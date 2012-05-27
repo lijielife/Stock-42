@@ -34,14 +34,14 @@ p.champ {
 	overflow			: hidden;
 }
 
-input:not([type=submit]), select {
+input:not([type=submit]), select, textarea {
 	
 	line-height			: 1.2em;
 	margin-left			: 1em;
 	float				: right;
 }
 
-input:not([type=submit]) {
+input:not([type=submit]), textarea {
 	-moz-border-radius	: 3px;
 	border				: rgba(60,112,255, 0.8) 1px solid;
 }

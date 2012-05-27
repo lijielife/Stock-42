@@ -13,57 +13,67 @@ Grâce à Projet_Navigation_Page :
 -->
 <configdata>
 	<menu>
-	<accueil>
-		<title>accueil</title>
-		<label>accueil</label>
-		<route>main-accueil</route>
-	</accueil>
-	
-												<!-- 	Module de gestion des Stock -->
-	
-	<modulestock>
-		<label>Gestion des Stocks</label>
-		<title>Module de gestion des stocks</title>
-		<route>stock-accueil</route>
-		<pages>
-			<actuel>
-				<label>Stock Globaux</label>
-				<route>stock-global</route>
-				<pages>
-					<frais>
-						<label>Produits Frais</label>
-						<route>stock-frais</route>
-					</frais>
-					<epicerie>
-						<label>Epicerie</label>
-						<route>stock-autres</route>
-					</epicerie>
-				</pages>
-			</actuel>
-			<gestion>
-				<label>Gestion des Produits</label>
-				<route>stock-gestion</route>
-				<pages>
-					<ajout>
-						<label>Ajout d'un produit</label>
-						<route>stock-ajout</route>
-					</ajout>
-					<suppression>
-						<label>Consommation d'un produit</label>
-						<route>stock-suppression</route>
-					</suppression>
-				</pages>
-			</gestion>
-		</pages>
-	</modulestock>
-	
-	
-	
-	
-	<logout>
-		<title>Se déconnecter</title>
-		<label>Déconnexion</label>
-		<route>main-logout</route>
-	</logout>
+		<accueil>
+			<title>accueil</title>
+			<label>accueil</label>
+			<route>main-accueil</route>
+		</accueil>
+		
+													<!-- 	Module de gestion des Stock -->
+		
+		<modulestock>
+			<label>Gestion des Stocks</label>
+			<title>Module de gestion des stocks</title>
+			<route>stock-accueil</route>
+			<pages>
+				<actuel>
+					<label>Stock Globaux</label>
+					<route>stock-global</route>
+					<pages>
+						<frais>
+							<label>Produits Frais</label>
+							<route>stock-frais</route>
+						</frais>
+						<epicerie>
+							<label>Epicerie</label>
+							<route>stock-autres</route>
+						</epicerie>
+					</pages>
+				</actuel>
+				<gestion>
+					<label>Gestion des Produits</label>
+					<route>stock-gestion</route>
+					<pages>
+						<ajout>
+							<label>Ajout d'un produit</label>
+							<route>stock-ajout</route>
+						</ajout>
+						<suppression>
+							<label>Consommation d'un produit</label>
+							<route>stock-suppression</route>
+						</suppression>
+					</pages>
+				</gestion>
+				<administration>
+					<label>Administration</label>
+					<route>stock-admin</route>
+					<pages>
+						<ajoutcategorie>
+							<label>Ajouter une catégorie de produit</label>
+							<route>stock-admin_cat</route>
+						</ajoutcategorie>
+					</pages>
+				</administration>
+			</pages>
+		</modulestock>
+		<administrationserveur>
+					<label>Configuration Apache</label>
+					<route>main-config_apache</route>
+		</administrationserveur>
+		<logout>
+			<title>Se déconnecter</title>
+			<label>Déconnexion</label>
+			<route>main-logout</route>
+		</logout>
 	</menu>
 </configdata>

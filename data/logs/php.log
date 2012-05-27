@@ -1,0 +1,194 @@
+[21-May-2012 21:56:29] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_VARIABLE in /Users/francois/Developpement/Projets/Stock/application/modules/main/controllers/IndexController.php on line 74
+[21-May-2012 21:56:42] PHP Catchable fatal error:  Argument 1 passed to Zend_Auth::authenticate() must be an instance of Zend_Auth_Adapter_Interface, null given, called in /Users/francois/Developpement/Projets/Stock/application/modules/main/controllers/IndexController.php on line 62 and defined in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Auth.php on line 115
+[22-May-2012 13:37:09] PHP Parse error:  syntax error, unexpected '{' in /Users/francois/Developpement/Projets/Stock/library/Projet/Controller/Action.php on line 15
+[22-May-2012 13:56:10] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:18] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:19] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:19] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:20] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:20] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:21] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:21] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:21] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:22] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 13:57:22] PHP Fatal error:  Call to a member function FlashMessenger() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[22-May-2012 14:01:55] PHP Fatal error:  Call to a member function getMessages() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 57
+[22-May-2012 14:01:57] PHP Fatal error:  Call to a member function getMessages() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 57
+[22-May-2012 14:01:57] PHP Fatal error:  Call to a member function getMessages() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 57
+[22-May-2012 14:01:58] PHP Fatal error:  Call to a member function getMessages() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 57
+[22-May-2012 14:01:58] PHP Fatal error:  Call to a member function getMessages() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 57
+[22-May-2012 14:01:59] PHP Fatal error:  Call to a member function getMessages() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 57
+[22-May-2012 14:01:59] PHP Fatal error:  Call to a member function getMessages() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 57
+[22-May-2012 14:19:12] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'Layout_Helper_ParseMessages' does not have a method 'parseMessages' in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Abstract.php on line 350
+[22-May-2012 14:19:26] PHP Notice:  Undefined variable: sClass in /Users/francois/Developpement/Projets/Stock/application/layouts/helpers/ParseMessages.php on line 18
+[22-May-2012 14:19:41] PHP Catchable fatal error:  Argument 1 passed to Layout_Helper_ParseMessages::parseMessages() must be an array, null given in /Users/francois/Developpement/Projets/Stock/application/layouts/helpers/ParseMessages.php on line 5
+[22-May-2012 14:30:09] PHP Catchable fatal error:  Argument 1 passed to Zend_Form::setErrors() must be an array, string given, called in /Users/francois/Developpement/Projets/Stock/application/modules/main/controllers/IndexController.php on line 57 and defined in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php on line 2450
+[22-May-2012 16:32:47] PHP Fatal error:  Using $this when not in object context in /Users/francois/Developpement/Projets/Stock/application/services/Constantes.php on line 6
+[22-May-2012 16:33:18] PHP Notice:  Use of undefined constant CSS_FORM_ERREUR - assumed 'CSS_FORM_ERREUR' in /Users/francois/Developpement/Projets/Stock/application/services/Constantes.php on line 12
+[22-May-2012 16:33:29] PHP Warning:  Exception caught by form: Plugin by name 'FormErreurGlobale' was not found in the registry; used paths:
+Projet_Form_Decorator_: Projet/Form/Decorator/
+Zend_Form_Decorator_: Zend/Form/Decorator/
+Stack Trace:
+#0 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2625): Zend_Loader_PluginLoader->load('FormErreurGloba...')
+#1 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(3357): Zend_Form->_getDecorator('FormErreurGloba...', NULL)
+#2 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2778): Zend_Form->_loadDecorator(Array, 'FormErreurGloba...')
+#3 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2902): Zend_Form->getDecorators()
+#4 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2920): Zend_Form->render()
+#5 /Users/francois/Developpement/Projets/Stock/application/modules/main/views/scripts/index/login.phtml(3): Zend_Form->__toString()
+#6 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View.ph in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php on line 2925
+[22-May-2012 16:42:33] PHP Fatal error:  Class 'Symbol_P' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Paragraphe.php on line 22
+[22-May-2012 16:45:36] PHP Notice:  Use of undefined constant CSS_LABEL_INLINE_PADDING_SMALL - assumed 'CSS_LABEL_INLINE_PADDING_SMALL' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Paragraphe.php on line 24
+[22-May-2012 16:45:36] PHP Warning:  Exception caught by form: Method hasErrors does not exist
+Stack Trace:
+#0 /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/FormErreurGlobale.php(18): Zend_Form->__call('hasErrors', Array)
+#1 /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/FormErreurGlobale.php(18): Form_Login->hasErrors()
+#2 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2904): Projet_Form_Decorator_FormErreurGlobale->render('<form id="FormL...')
+#3 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2920): Zend_Form->render()
+#4 /Users/francois/Developpement/Projets/Stock/application/modules/main/views/scripts/index/login.phtml(3): Zend_Form->__toString()
+#5 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View.php(108): include('/Users/francois...')
+#6 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Abstract.php(888): Zend_View->_run('/Users/francois...')
+#7 /Users/francois/Developpement/Projets/Stock/library/Zend.or in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php on line 2925
+[22-May-2012 16:46:13] PHP Notice:  Undefined variable: sClasses in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Paragraphe.php on line 24
+[22-May-2012 16:46:13] PHP Warning:  Exception caught by form: Method hasErrors does not exist
+Stack Trace:
+#0 /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/FormErreurGlobale.php(18): Zend_Form->__call('hasErrors', Array)
+#1 /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/FormErreurGlobale.php(18): Form_Login->hasErrors()
+#2 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2904): Projet_Form_Decorator_FormErreurGlobale->render('<form id="FormL...')
+#3 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2920): Zend_Form->render()
+#4 /Users/francois/Developpement/Projets/Stock/application/modules/main/views/scripts/index/login.phtml(3): Zend_Form->__toString()
+#5 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View.php(108): include('/Users/francois...')
+#6 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Abstract.php(888): Zend_View->_run('/Users/francois...')
+#7 /Users/francois/Developpement/Projets/Stock/library/Zend.or in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php on line 2925
+[22-May-2012 16:46:28] PHP Warning:  Exception caught by form: Method hasErrors does not exist
+Stack Trace:
+#0 /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/FormErreurGlobale.php(18): Zend_Form->__call('hasErrors', Array)
+#1 /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/FormErreurGlobale.php(18): Form_Login->hasErrors()
+#2 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2904): Projet_Form_Decorator_FormErreurGlobale->render('<form id="FormL...')
+#3 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2920): Zend_Form->render()
+#4 /Users/francois/Developpement/Projets/Stock/application/modules/main/views/scripts/index/login.phtml(3): Zend_Form->__toString()
+#5 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View.php(108): include('/Users/francois...')
+#6 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Abstract.php(888): Zend_View->_run('/Users/francois...')
+#7 /Users/francois/Developpement/Projets/Stock/library/Zend.or in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php on line 2925
+[22-May-2012 17:25:04] PHP Notice:  Undefined variable: oChamps in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Paragraphe.php on line 32
+[22-May-2012 17:25:04] PHP Fatal error:  Call to a member function append() on a non-object in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Paragraphe.php on line 32
+[22-May-2012 17:26:32] PHP Fatal error:  Call to undefined function render() in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Paragraphe.php on line 30
+[23-May-2012 19:04:14] PHP Warning:  include_once(Projet/Controller/Router/Route.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[23-May-2012 19:04:14] PHP Warning:  include_once(): Failed opening 'Projet/Controller/Router/Route.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock//application:/Users/francois/Developpement/Projets/Stock//application/models:/Users/francois/Developpement/Projets/Stock//application/Service:/Users/francois/Developpement/Projets/Stock//application/modules:/Users/francois/Developpement/Projets/Stock//application/modules/main:/Users/francois/Developpement/Projets/Stock//application/modules/ajax:/Users/francois/Developpement/Projets/Stock//library/:/Users/francois/Developpement/Projets/Stock//library/Projet/:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[23-May-2012 19:04:14] PHP Warning:  include_once(Projet/Controller/Router/Route.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[23-May-2012 19:04:14] PHP Warning:  include_once(): Failed opening 'Projet/Controller/Router/Route.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock//application:/Users/francois/Developpement/Projets/Stock//application/models:/Users/francois/Developpement/Projets/Stock//application/Service:/Users/francois/Developpement/Projets/Stock//application/modules:/Users/francois/Developpement/Projets/Stock//application/modules/main:/Users/francois/Developpement/Projets/Stock//application/modules/ajax:/Users/francois/Developpement/Projets/Stock//library/:/Users/francois/Developpement/Projets/Stock//library/Projet/:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[23-May-2012 19:05:39] PHP Warning:  include_once(Projet/Controller/Router/Route/Chain.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[23-May-2012 19:05:39] PHP Warning:  include_once(): Failed opening 'Projet/Controller/Router/Route/Chain.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock//application:/Users/francois/Developpement/Projets/Stock//application/models:/Users/francois/Developpement/Projets/Stock//application/Service:/Users/francois/Developpement/Projets/Stock//application/modules:/Users/francois/Developpement/Projets/Stock//application/modules/main:/Users/francois/Developpement/Projets/Stock//application/modules/ajax:/Users/francois/Developpement/Projets/Stock//library/:/Users/francois/Developpement/Projets/Stock//library/Projet/:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[23-May-2012 19:05:39] PHP Fatal error:  Class 'Projet_Controller_Router_Route_Chain' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Controller/Router/Route.php on line 46
+[23-May-2012 19:10:44] PHP Fatal error:  Zend_Controller_Router_Exception: Route main-accueil is not defined in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Helper/Navigation/HelperAbstract.php on line 522
+[23-May-2012 19:14:28] PHP Fatal error:  Zend_Controller_Router_Exception: Route main- is not defined in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Helper/Navigation/HelperAbstract.php on line 522
+[23-May-2012 19:17:18] PHP Fatal error:  Zend_Controller_Router_Exception: Route stock-acceuil is not defined in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Helper/Navigation/HelperAbstract.php on line 522
+[23-May-2012 19:17:27] PHP Fatal error:  Zend_Controller_Router_Exception: language is not specified in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Helper/Navigation/HelperAbstract.php on line 522
+[23-May-2012 19:17:36] PHP Fatal error:  Zend_Controller_Router_Exception: language is not specified in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Helper/Navigation/HelperAbstract.php on line 522
+[23-May-2012 19:35:54] PHP Fatal error:  Zend_Controller_Router_Exception: language is not specified in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Helper/Navigation/HelperAbstract.php on line 522
+[24-May-2012 12:09:40] PHP Fatal error:  Cannot use object of type stdClass as array in /Users/francois/Developpement/Projets/Stock/application/layouts/helpers/LoginZone.php on line 9
+[24-May-2012 12:10:58] PHP Fatal error:  Call to a member function toArray() on a non-object in /Users/francois/Developpement/Projets/Stock/application/layouts/scripts/layout.phtml on line 56
+[24-May-2012 12:14:38] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /Users/francois/Developpement/Projets/Stock/application/layouts/helpers/LoginZone.php on line 9
+[24-May-2012 12:20:05] PHP Fatal error:  Cannot use object of type stdClass as array in /Users/francois/Developpement/Projets/Stock/application/layouts/helpers/LoginZone.php on line 10
+[24-May-2012 16:31:19] PHP Fatal error:  Call to undefined function isArray() in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 21
+[24-May-2012 16:37:21] PHP Catchable fatal error:  Argument 1 passed to Projet_View_Helper_DispArray::addElements() must be an instance of Projet_Xml, null given, called in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 10 and defined in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 20
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:38:10] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:26] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:27] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:40:28] PHP Warning:  Invalid argument supplied for foreach() in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 51
+[24-May-2012 16:43:52] PHP Catchable fatal error:  Argument 1 passed to Projet_Xml::setAttrs() must be an array, string given, called in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 16 and defined in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 79
+[24-May-2012 16:45:23] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting '(' in /Users/francois/Developpement/Projets/Stock/library/Projet/Xml.php on line 16
+[24-May-2012 16:51:50] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_STRING in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 5
+[24-May-2012 16:56:10] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 10
+[24-May-2012 16:56:19] PHP Notice:  Undefined variable: thi in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:19] PHP Notice:  Trying to get property of non-object in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:19] PHP Notice:  Undefined variable: thi in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:19] PHP Notice:  Trying to get property of non-object in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:19] PHP Notice:  Undefined variable: thi in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:19] PHP Notice:  Trying to get property of non-object in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:27] PHP Notice:  Undefined index: ID in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:27] PHP Notice:  Undefined index: MOE in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[24-May-2012 16:56:27] PHP Notice:  Undefined index: PER in /Users/francois/Developpement/Projets/Stock/library/Projet/View/Helper/DispArray.php on line 18
+[25-May-2012 19:28:40] PHP Warning:  include_once(Projet/Mapper.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:28:40] PHP Warning:  include_once(): Failed opening 'Projet/Mapper.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock/application:/Users/francois/Developpement/Projets/Stock/application/models:/Users/francois/Developpement/Projets/Stock/application/Service:/Users/francois/Developpement/Projets/Stock/application/modules:/Users/francois/Developpement/Projets/Stock/application/modules/main:/Users/francois/Developpement/Projets/Stock/application/modules/stock:/Users/francois/Developpement/Projets/Stock/library:/Users/francois/Developpement/Projets/Stock/library/Projet:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:28:40] PHP Fatal error:  Class 'Projet_Mapper' not found in /Users/francois/Developpement/Projets/Stock/application/models/mappers/Categories.php on line 3
+[25-May-2012 19:31:38] PHP Warning:  include_once(Projet/DataHelper.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:31:38] PHP Warning:  include_once(): Failed opening 'Projet/DataHelper.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock/application:/Users/francois/Developpement/Projets/Stock/application/models:/Users/francois/Developpement/Projets/Stock/application/Service:/Users/francois/Developpement/Projets/Stock/application/modules:/Users/francois/Developpement/Projets/Stock/application/modules/main:/Users/francois/Developpement/Projets/Stock/application/modules/stock:/Users/francois/Developpement/Projets/Stock/library:/Users/francois/Developpement/Projets/Stock/library/Projet:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:31:38] PHP Fatal error:  Class 'Projet_DataHelper' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Db/Table.php on line 687
+[25-May-2012 19:36:22] PHP Warning:  include_once(Projet/DataHelper.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:36:22] PHP Warning:  include_once(): Failed opening 'Projet/DataHelper.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock/application:/Users/francois/Developpement/Projets/Stock/application/models:/Users/francois/Developpement/Projets/Stock/application/Service:/Users/francois/Developpement/Projets/Stock/application/modules:/Users/francois/Developpement/Projets/Stock/application/modules/main:/Users/francois/Developpement/Projets/Stock/application/modules/stock:/Users/francois/Developpement/Projets/Stock/library:/Users/francois/Developpement/Projets/Stock/library/Projet:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:36:22] PHP Fatal error:  Class 'Projet_DataHelper' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Db/Table.php on line 284
+[25-May-2012 19:38:15] PHP Warning:  include_once(Projet/Exception.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:38:15] PHP Warning:  include_once(): Failed opening 'Projet/Exception.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock/application:/Users/francois/Developpement/Projets/Stock/application/models:/Users/francois/Developpement/Projets/Stock/application/Service:/Users/francois/Developpement/Projets/Stock/application/modules:/Users/francois/Developpement/Projets/Stock/application/modules/main:/Users/francois/Developpement/Projets/Stock/application/modules/stock:/Users/francois/Developpement/Projets/Stock/library:/Users/francois/Developpement/Projets/Stock/library/Projet:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[25-May-2012 19:38:15] PHP Fatal error:  Class 'Projet_Exception' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Db/Table.php on line 194
+[26-May-2012 12:33:59] PHP Notice:  Undefined variable: oItem in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutCategorie.php on line 19
+[26-May-2012 12:33:59] PHP Notice:  Undefined variable: oQuantite in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutCategorie.php on line 19
+[26-May-2012 12:34:26] PHP Notice:  Undefined variable: oItem in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutCategorie.php on line 19
+[26-May-2012 12:34:26] PHP Notice:  Undefined variable: oQuantite in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutCategorie.php on line 19
+[27-May-2012 21:57:10] PHP Fatal error:  Cannot redeclare Projet_Form::__construct() in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 116
+[27-May-2012 21:57:31] PHP Fatal error:  Cannot redeclare Projet_Form::setDefaultDecorators() in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 114
+[27-May-2012 21:57:55] PHP Fatal error:  Class name must be a valid object or a string in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 110
+[27-May-2012 21:59:35] PHP Warning:  Missing argument 2 for Projet_Form::setSrvMethodes(), called in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutCategorie.php on line 8 and defined in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 134
+[27-May-2012 21:59:35] PHP Notice:  Undefined variable: sSvcSaveMethode in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 137
+[27-May-2012 21:59:35] PHP Fatal error:  Class 'Categories' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 110
+[27-May-2012 21:59:52] PHP Fatal error:  Class 'Categories' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 110
+[27-May-2012 22:00:17] PHP Fatal error:  Class 'Application_Services_Categories' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form.php on line 110
+[27-May-2012 22:00:24] PHP Warning:  include_once(Projet/DataHelper.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[27-May-2012 22:00:24] PHP Warning:  include_once(): Failed opening 'Projet/DataHelper.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock/application:/Users/francois/Developpement/Projets/Stock/application/models:/Users/francois/Developpement/Projets/Stock/application/Service:/Users/francois/Developpement/Projets/Stock/application/modules:/Users/francois/Developpement/Projets/Stock/application/modules/main:/Users/francois/Developpement/Projets/Stock/application/modules/stock:/Users/francois/Developpement/Projets/Stock/library:/Users/francois/Developpement/Projets/Stock/library/Projet:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[27-May-2012 22:00:24] PHP Fatal error:  Class 'Projet_DataHelper' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Controller/Action.php on line 196
+[27-May-2012 22:14:20] PHP Catchable fatal error:  Argument 1 passed to Projet_Mapper::save() must be an instance of Projet_Entite, instance of Application_Model_Categorie given, called in /Users/francois/Developpement/Projets/Stock/application/services/Categories.php on line 9 and defined in /Users/francois/Developpement/Projets/Stock/library/Projet/Mapper.php on line 145
+[27-May-2012 22:15:24] PHP Warning:  include_once(Projet/DataHelper.php): failed to open stream: No such file or directory in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[27-May-2012 22:15:24] PHP Warning:  include_once(): Failed opening 'Projet/DataHelper.php' for inclusion (include_path='/Users/francois/Developpement/Projets/Stock/application:/Users/francois/Developpement/Projets/Stock/application/models:/Users/francois/Developpement/Projets/Stock/application/Service:/Users/francois/Developpement/Projets/Stock/application/modules:/Users/francois/Developpement/Projets/Stock/application/modules/main:/Users/francois/Developpement/Projets/Stock/application/modules/stock:/Users/francois/Developpement/Projets/Stock/library:/Users/francois/Developpement/Projets/Stock/library/Projet:/Users/francois/Developpement/Projets/Stock/library:.:./library') in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Loader.php on line 146
+[27-May-2012 22:15:24] PHP Fatal error:  Class 'Projet_DataHelper' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Mapper.php on line 102
+[27-May-2012 22:17:56] PHP Notice:  Undefined index: Description in /Users/francois/Developpement/Projets/Stock/application/services/Categories.php on line 7

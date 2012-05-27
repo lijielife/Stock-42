@@ -99,7 +99,7 @@ class Projet_Mapper {
 			}
 
 		}
-		return Projet_DataHelper::array_filter($aData);
+		return array_filter($aData);
 	}
 
 	/**

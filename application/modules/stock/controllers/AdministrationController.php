@@ -8,15 +8,17 @@
  * @package    modules_main
  * @subpackage controllers
  */
-class IndexController extends Projet_Controller_Action {
+class Stock_AdministrationController extends Projet_Controller_Action {
 
 	public function indexAction() {
 		$this->view->message = "succes du login";
 	}
 	
+
+	public function ajoutercategorieAction() {
+		$this->formCreer(new Form_AjoutCategorie());
+	}
+
 	
-	public function configapacheAction() {
-		phpinfo();
- 	}
 	
 }

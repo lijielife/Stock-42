@@ -53,12 +53,88 @@ class Projet_Form extends Zend_Form {
 	protected function createSubmit($sText = 'Valider') {
 		$oSubmit = new Projet_Form_Element_Submit(self::SUBMIT);
 		$oSubmit->setLabel($sText);
-		return $oSubmit; 
+		return $oSubmit;
 	}
 	
 	protected function addElementsWithSubmit(array $aElements, $sText = null) {
 		$this->addElements($aElements);
 		$this->addSubmit($sText);
+	}
+	
+	/** @brief	nom du service associ√© au formulaire
+	 *
+	 * A chaque formulaire est associ√© un service qui s'occupe de
+	 * remplir les valeurs par d√©faut des champs (populate) et d'enregistrer
+	 * en base lors d'un post
+	 *
+	 * A red√©finir dans chaque classe fille
+	 *
+	 * @author amboise.lafont
+	 */
+	protected $sService;
+	
+	/** @brief	objet formulaire associ√© au formulaire
+	 *
+	 * l'objet n'est instanci√© qu'en cas de besoin
+	 *
+	 * @author amboise.lafont
+	 */
+	
+	protected $oService = null;
+	
+	/** @brief	nom de la m√©thode du service pour sauvegarder les donn√©s du formulaires
+	 *
+	 * Cette m√©thode doit prendre $this->getValues() en param√®tre
+	 *
+	 * A red√©finir dans chaque classe fille
+	 *
+	 * @author amboise.lafont
+	 */
+	protected $sSvcSaveMethode = 'formSave';
+	
+	/** @brief	nom de la m√©thode du service pour chercher les donn√©s du formulaire
+	 *
+	 * Cette m√©thode doit prendre un $id en param√®tre (pour le populate)
+	 *
+	 * A red√©finir dans chaque classe fille
+	 *
+	 * @author amboise.lafont
+	 */
+	protected $sSvcDataMethode = 'formGet';
+
+	/** @brief	renvoie le service associ√© au formulaire
+	 */
+	public function getService() {
+		// instanciation du service s'il n'existe pas
+		if (!$this->oService) {
+			$this->oService = new $this->sService;
+		}
+		return $this->oService;
+	
+	}
+	
+	public function getSvcSaveMethode() {
+		return $this->sSvcSaveMethode;
+	}
+	
+	public function getSvcDataMethode() {
+		return $this->sSvcDataMethode;
+	}
+	
+	/**
+	 * @brief	Enregistrement des m√©thodes pour g√©rer le formulaire dans le service
+	 *
+	 *
+	 * @author	francoisespinet
+	 * @version 7 mars 2012 - 11:00:17
+	 * @param string $sService
+	 * @param string $sSvcDataMethode
+	 * @param string $sSvcSaveMethode
+	 */
+	public function setSrvMethodes($sService, $sSvcSaveMethode, $sSvcDataMethode='') {
+		$this->sService = $sService;
+		$this->sSvcDataMethode = $sSvcDataMethode;
+		$this->sSvcSaveMethode = $sSvcSaveMethode;
 	}
 
 }
