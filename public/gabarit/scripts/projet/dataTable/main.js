@@ -182,7 +182,7 @@ function createDataTable(element, urlliste, aAnchors, aClasses, aoColumnDefs, ur
 		"sPaginationType": "full_numbers",
 
 		//appel du plugin TableTools
-		"sDom" : "<\"H\"CTfl>t<\"F\"rip>",
+		"sDom" : "<\"H\"fl>t<\"F\"rip>",
 		"oColVis": {
 		//			"activate": "mouseover",
 			"buttonText": "Ajouter/Supprimer des colonnes",

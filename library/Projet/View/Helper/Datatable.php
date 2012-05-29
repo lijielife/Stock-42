@@ -60,7 +60,7 @@ class Projet_View_Helper_Datatable extends Zend_View_Helper_Abstract {
 			->appendFile(LIBRARY_PATH.'/dataTables/extras/TableTools/media/js/TableTools.min.js')
 			->appendFile(LIBRARY_PATH.'/dataTables/extras/ColVis/media/js/ColVis.min.js')
 			// fonctions personnelles
-			->appendFile(SCRIPTS_PATH.'/projet/main.js');
+			->appendFile(SCRIPTS_PATH.'/projet/dataTable/main.js');
 	}
 
 	protected function appendCSS() {

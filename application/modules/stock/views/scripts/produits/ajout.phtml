@@ -1,3 +1,7 @@
 <?php
 $this->placeholder('TitreHaut')->set("Ajout d'un produit");
 echo $this->form;
+if ($this->message) {
+	$this->placeholder('TitreHaut')->set($this->message);
+	echo $this->message;
+}

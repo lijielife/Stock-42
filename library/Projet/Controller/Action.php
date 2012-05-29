@@ -85,8 +85,20 @@ class Projet_Controller_Action extends Zend_Controller_Action {
 		$sUrlSuppr    = $this->getUrl($sRoute, array('action' => self::ACTION_DESACTIVER, 'controller' => $controller), $module, $controller, self::ACTION_DESACTIVER);
 	
 		$this->setUrls($sUrlLister, $sUrlModifier, $sUrlSuppr, $sUrlCreer);
+	}
 	
+	protected function returnListeUrl($sAction = self::ACTION_LISTER) {
+		$module = $this->_request->getModuleName();
+		$controller = 'ax'.$this->_request->getControllerName();
+		
+		$sRoute = $this->getRouteGenerique();
+		
+		// on utilise getUrl à la place de getUrlGenerique car c'est plus efficace
+		return $this->getUrl($sRoute, array('action' => $sAction    , 'controller' => $controller), $module, $controller, $sAction );
+	}
 	
+	protected function autoSetListeUrl($sAction = null) {
+		$this->view->urlListe = $this->returnListeUrl();
 	}
 	
 	protected function getRouteGenerique() {
@@ -141,19 +153,20 @@ class Projet_Controller_Action extends Zend_Controller_Action {
 	/** @brief	Renvoie l'url associé à la route $sRoute
 	 *
 	 * Le module, controller, action donnée en param√®tre permettent de déterminer le nom de la ressource
-	 *
+	 * à réactiver
+	 * 
 	 * @return null si pas autorisé, ou l'url
 	 * @author amboise.lafont
 	 */
 	protected function getUrl($sRoute, $aOptions, $sModule, $sController, $sAction) {
 		// on suppose que le tableau defaults comprend le module, controller, action
-		if (Projet_Acl_Acl::defaultIsAllowed(Projet_DataHelper::resource($sModule, $sController, $sAction))) {
-			//return '/'.$oRoute->assemble($aOptions, false, true);
-			return $this->_helper->Url->url($aOptions, $sRoute);
-		}
-		else {
-			return null;
-		}
+// 		if (Projet_Acl_Acl::defaultIsAllowed(Projet_DataHelper::resource($sModule, $sController, $sAction))) {
+// 			//return '/'.$oRoute->assemble($aOptions, false, true);
+// 			return $this->_helper->Url->url($aOptions, $sRoute);
+// 		}
+// 		else {
+// 			return null;
+// 		}
 	}
 	
 	/** @brief	données entrées dans le formulaire invalide

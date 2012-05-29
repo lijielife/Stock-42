@@ -3,11 +3,12 @@
 	echo $this->doctype();
 	$oHead = new Projet_Xml('head');
 	$oHead->append(array($this->headLink(),
+						 $this->jQuery(),
 						 $this->headMeta(),
 						 $this->headScript(),
 						 $this->headStyle(),
-						 $this->headTitle(),
-						 $this->jQuery()));
+						 $this->headTitle()
+						));
 	echo $oHead;
 	// On récupère l'éventuelle identité de la personne connectée.
 	$oIdent = Zend_Auth::getInstance()->getIdentity();

@@ -2,7 +2,6 @@
 /**
  * Controlleur page d'accueil.
  *
- * @remark	ATTENTION : seul contrôleur sans nameSpace "Main_"
  *
  * @category   Projet
  * @package    modules_main
@@ -15,7 +14,9 @@ class Stock_StockController extends Projet_Controller_Action {
 	}
 	
 	function globalAction() {
-		
+		$oService = new Application_Service_Item();
+		$this->view->aCols = $oService->listerCols();
+		$this->autoSetListeUrl('global');
 	}
 	
 	function fraisAction() {

@@ -241,27 +241,6 @@ class Projet_Mapper {
 		$this->updateRaw($id, array('PER' => $this->getDbTable()->PDO_datetimeFormat()));
 	}
 
-	/** @brief	construit une expression SQL avec les alias correspondant aux colonnes
-	 *
-	 * @deprecated utiliser getAsArray
-	 *
-	 * @param $aCols tableau des colonnes à aliaser
-	 * @return Zend_Db_Expr
-	 */
-	static protected function exprJson(array $aCols) {
-
-		$sExpr = '';
-		foreach ($aCols as $key => $value) {
-			if ($sExpr) {
-				$sExpr .= ', ';
-			}
-			$sExpr .= $value.' AS "'.$key.'"';
-		}
-
-		return new Zend_Db_Expr($sExpr);
-
-	}
-
 	public function getAsArray(array $aCols, $bPer = true) {
 		$oDb = $this->getDbTable();
 
