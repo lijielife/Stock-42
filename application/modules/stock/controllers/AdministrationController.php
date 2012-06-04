@@ -19,6 +19,9 @@ class Stock_AdministrationController extends Projet_Controller_Action {
 		$this->formCreer(new Form_AjoutCategorie());
 	}
 
-	
+	public function ajouterlibelleAction() {
+		$oMapper = new Application_Model_Mapper_RefCategories();
+		$this->formCreer(new Form_AjoutProduit($oMapper->getLibelles()));
+	}
 	
 }

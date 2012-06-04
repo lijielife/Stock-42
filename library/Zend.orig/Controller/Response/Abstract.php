@@ -343,18 +343,18 @@ abstract class Zend_Controller_Response_Abstract
             // Haven't changed the response code, and we have no headers
             return $this;
         }
-
+		
         $httpCodeSent = false;
 
         foreach ($this->_headersRaw as $header) {
             if (!$httpCodeSent && $this->_httpResponseCode) {
-                header($header, true, $this->_httpResponseCode);
+              
+            	header($header, true, $this->_httpResponseCode);
                 $httpCodeSent = true;
             } else {
                 header($header);
             }
         }
-
         foreach ($this->_headers as $header) {
             if (!$httpCodeSent && $this->_httpResponseCode) {
                 header($header['name'] . ': ' . $header['value'], $header['replace'], $this->_httpResponseCode);
@@ -363,9 +363,9 @@ abstract class Zend_Controller_Response_Abstract
                 header($header['name'] . ': ' . $header['value'], $header['replace']);
             }
         }
-
+        
         if (!$httpCodeSent) {
-            header('HTTP/1.1 ' . $this->_httpResponseCode);
+           header('HTTP/1.1 ' . $this->_httpResponseCode);
             $httpCodeSent = true;
         }
 

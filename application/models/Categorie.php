@@ -13,8 +13,8 @@ class Application_Model_Categorie extends Projet_Entite {
 		return $this->_description;
 	}
 	
-	public function setLibelle($sLibelle) {
-		$this->_libelle = $sLibelle;
+	public function setLibelle($sRefLibelle) {
+		$this->_libelle = $sRefLibelle;
 	}
 	
 	public function getLibelle() {

@@ -3,7 +3,6 @@ class Projet_Controller_Action_Ajax extends Projet_Controller_Action {
 	
 	
 	public function init() {
-		parent::init();
 		$this->_helper->layout->disableLayout();		# Désactivation du layout
 	}
 	

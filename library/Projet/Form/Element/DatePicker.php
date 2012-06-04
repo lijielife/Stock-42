@@ -15,7 +15,13 @@ class Projet_Form_Element_DatePicker extends ZendX_JQuery_Form_Element_DatePicke
 		if(isset($aOptions['ajax'])) {
 			$this->_ajax = $aOptions['ajax'];
 			unset($aOptions['ajax']);
+		
 		}
+		
+		$this->setJqueryParams(array('dateFormat' => "dd/mm/yy",
+									 'firstDay'	  => 1))
+			 ->addValidator(new Zend_Validate_Date(array('format' => "dd/mm/yy")));
+		
 		parent::__construct($spec, $aOptions);
 	}
 	

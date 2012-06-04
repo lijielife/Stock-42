@@ -92,13 +92,11 @@ class Projet_Controller_Action extends Zend_Controller_Action {
 		$controller = 'ax'.$this->_request->getControllerName();
 		
 		$sRoute = $this->getRouteGenerique();
-		
-		// on utilise getUrl à la place de getUrlGenerique car c'est plus efficace
-		return $this->getUrl($sRoute, array('action' => $sAction    , 'controller' => $controller), $module, $controller, $sAction );
+		return $this->getUrl($sRoute, array('action' => $sAction    , 'controller' => $controller), $module, $controller, $sAction);
 	}
 	
 	protected function autoSetListeUrl($sAction = null) {
-		$this->view->urlListe = $this->returnListeUrl();
+		$this->view->urlliste = $this->returnListeUrl($sAction);
 	}
 	
 	protected function getRouteGenerique() {
@@ -160,13 +158,13 @@ class Projet_Controller_Action extends Zend_Controller_Action {
 	 */
 	protected function getUrl($sRoute, $aOptions, $sModule, $sController, $sAction) {
 		// on suppose que le tableau defaults comprend le module, controller, action
-// 		if (Projet_Acl_Acl::defaultIsAllowed(Projet_DataHelper::resource($sModule, $sController, $sAction))) {
-// 			//return '/'.$oRoute->assemble($aOptions, false, true);
-// 			return $this->_helper->Url->url($aOptions, $sRoute);
-// 		}
-// 		else {
+		//if (Projet_Acl_Acl::defaultIsAllowed(Projet_DataHelper::resource($sModule, $sController, $sAction))) {
+			//return '/'.$oRoute->assemble($aOptions, false, true);
+			return $this->_helper->Url->url($aOptions, $sRoute);
+		//}
+		//else {
 // 			return null;
-// 		}
+//  		}
 	}
 	
 	/** @brief	données entrées dans le formulaire invalide
@@ -217,7 +215,7 @@ class Projet_Controller_Action extends Zend_Controller_Action {
 					$ret = self::FORM_DOUBLON;
 				} catch (Exception $e) {
 					if (APP_DEBUG) {
-						throw new Projet_Exception('FORM_SAVE', "cf service form Save ou équivalent", $e);
+						throw new Zend_Exception('FORM_SAVE', "cf service form Save ou équivalent", $e);
 					} else {
 						$this->view->message = 'message.enregistrement.echec';
 						return self::FORM_INVALID;

@@ -14,7 +14,7 @@ class Stock_StockController extends Projet_Controller_Action {
 	}
 	
 	function globalAction() {
-		$oService = new Application_Service_Item();
+		$oService = new Application_Service_Produit();
 		$this->view->aCols = $oService->listerCols();
 		$this->autoSetListeUrl('global');
 	}
@@ -24,6 +24,6 @@ class Stock_StockController extends Projet_Controller_Action {
 	}
 	
 	function autresAction() {
-		
+	
 	}
 }

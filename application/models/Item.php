@@ -1,34 +1,32 @@
 <?php
 
-class Application_Model_Item extends Projet_Entite {
+class Application_Model_RefItems extends Projet_Entite {
 
-	protected $_idLibelle = null;
-	protected $_quantite = null;
-	protected $_idUser = null;
-	protected $_per = null;
+	protected $_description = null;
+	protected $_libelle = null;
+	protected $_idCategorie = null;
 	
-	public function setIdLibelle($nIdLibelle) {
-		$this->_idLibelle = $nIdLibelle;
+	public function setDescription($sDescription) {
+		$this->_description = $sDescription;
 	}
 	
-	public function getIdLibelle() {
-		return $this->_idLibelle;
+	public function getDescription() {
+		return $this->_description;
 	}
 	
-	public function setQuantite($nQuantite) {
-		$this->_quantite = $nQuantite;
-	}
-	
-	public function getLibelle() {
-		return $this->_quantite;
-	}
-	
-	public function setPer($_Per) {
-		$this->_per = $_Per;
+	public function setLibelle($sRefLibelle) {
+		$this->_libelle = $sRefLibelle;
 	}
 	
 	public function getLibelle() {
-		return $this->_per;
+		return $this->_libelle;
 	}
 	
+	public function setIdCategorie($nIdCategorie) {
+		$this->_idCategorie = $nIdCategorie;
+	}
+	
+	public function getIdCategorie() {
+		return $this->_idCategorie;
+	}
 }

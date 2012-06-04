@@ -102,6 +102,13 @@ class Projet_Mapper {
 		return array_filter($aData);
 	}
 
+	function formatDate($sChampDate) {
+		return "DATE_FORMAT($sChampDate, '%d-%m-%Y')";
+	}
+	
+	function formatDateTime($sChampDate) {
+		return "DATE_FORMAT($sChampDate, '%d-%m-%Y %Hh%im%ss')";
+	}
 	/**
 	 * Liste totale.
 	 * @return RowSet (spl)

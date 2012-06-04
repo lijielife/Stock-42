@@ -62,6 +62,10 @@ Grâce à Projet_Navigation_Page :
 							<label>Ajouter une catégorie de produit</label>
 							<route>stock-admin_cat</route>
 						</ajoutcategorie>
+						<ajouterlibelle>
+							<label>Ajouter un Élement</label>
+							<route>stock-admin_lib</route>
+						</ajouterlibelle>
 					</pages>
 				</administration>
 			</pages>

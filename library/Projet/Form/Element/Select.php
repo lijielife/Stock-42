@@ -8,6 +8,7 @@ class Projet_Form_Element_Select extends Zend_Form_Element_Select {
 		if(isset($aOptions['ajax'])) {
 			$this->_ajax = $aOptions['ajax'];
 			unset($aOptions['ajax']);
+			$this->setRegisterInArrayValidator(false);
 		}
 		parent::__construct($spec, $aOptions);
 	}
