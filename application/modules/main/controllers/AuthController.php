@@ -54,6 +54,11 @@ class AuthController extends Projet_Controller_Action {
 			return $this->render('login'); // re-render the login form
 		}
 		$auth->getStorage()->write($adapter->getResultRowObject(null, 'MDP'));
+		$oMapper = new Application_Model_Mapper_RefLogins();
+		$nId = (int) (array) $adapter->getResultRowObject('ID');
+		$oMapper->updateLogin($nId);
+		$oMapperUser = new Application_Model_Mapper_Users();
+		$oMapperUser->updateLastLogin($nId);
 		// We're authenticated! Redirect to the home page
 		$this->_helper->redirector->gotoRoute(array(), 'main-accueil');
 	}

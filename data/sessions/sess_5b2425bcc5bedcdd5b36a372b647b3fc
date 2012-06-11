@@ -1,1 +1,0 @@
-Zend_Auth|a:1:{s:7:"storage";O:8:"stdClass":7:{s:2:"ID";s:1:"1";s:3:"NOM";s:7:"Espinet";s:6:"PRENOM";s:9:"François";s:5:"LOGIN";s:8:"francois";s:3:"MOE";s:19:"2012-05-29 16:42:57";s:3:"PER";s:19:"0000-00-00 00:00:00";s:18:"DERNIERE_CONNEXION";s:19:"0000-00-00 00:00:00";}}

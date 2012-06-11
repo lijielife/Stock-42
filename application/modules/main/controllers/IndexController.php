@@ -12,6 +12,10 @@ class IndexController extends Projet_Controller_Action {
 
 	public function indexAction() {
 		$this->view->message = "succes du login";
+		$this->view->sousMessage = "Vous vous êtes loggés la dernière fois le : ";
+		$oMapper = new Application_Model_Mapper_Users();
+		$aIdentity = (array) Zend_Auth::getInstance()->getIdentity();
+		$this->view->loginDate = $oMapper->getLastLoginDate($aIdentity['ID']);
 	}
 	
 	

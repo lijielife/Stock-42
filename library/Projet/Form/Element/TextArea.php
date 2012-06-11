@@ -10,8 +10,8 @@ class Projet_Form_Element_TextArea extends Zend_Form_Element_Textarea {
 			unset($aOptions['ajax']);
 		}
 		if (! $this->getAttrib('cols')) {
-			$this->setAttribs(array('cols'	=> 25,
-									'rows'	=> 10));
+			$this->setAttribs(array('cols'	=> 50,
+									'rows'	=> 5));
 		}
 		parent::__construct($spec, $aOptions);
 	}
