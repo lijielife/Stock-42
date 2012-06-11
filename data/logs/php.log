@@ -410,3 +410,55 @@ Stack Trace:
 [04-Jun-2012 22:20:47] PHP Fatal error:  Class 'Application_Service_Item' not found in /Users/francois/Developpement/Projets/Stock/application/modules/stock/controllers/AxstockController.php on line 13
 [04-Jun-2012 22:22:20] PHP Fatal error:  Class 'Application_Service_Item' not found in /Users/francois/Developpement/Projets/Stock/application/modules/stock/controllers/AxstockController.php on line 13
 [04-Jun-2012 22:22:39] PHP Fatal error:  Class 'Application_Service_Item' not found in /Users/francois/Developpement/Projets/Stock/application/modules/stock/controllers/AxstockController.php on line 13
+[05-Jun-2012 09:39:57] PHP Parse error:  syntax error, unexpected T_PROTECTED in /Users/francois/Developpement/Projets/Stock/application/Bootstrap.php on line 30
+[05-Jun-2012 09:40:10] PHP Notice:  Undefined index: HTTP_HOST in /Users/francois/Developpement/Projets/Stock/application/Bootstrap.php on line 23
+[05-Jun-2012 09:40:10] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/francois/Developpement/Projets/Stock/application/Bootstrap.php:23) in /Users/francois/Developpement/Projets/Stock/application/Bootstrap.php on line 24
+[05-Jun-2012 09:51:33] PHP Notice:  Use of undefined constant CSS_INPUT_ERROR - assumed 'CSS_INPUT_ERROR' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/ErreurPrimer.php on line 13
+[05-Jun-2012 09:51:33] PHP Notice:  Use of undefined constant CSS_INPUT_ERROR - assumed 'CSS_INPUT_ERROR' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/ErreurPrimer.php on line 13
+[05-Jun-2012 09:54:17] PHP Notice:  Use of undefined constant S_DATE - assumed 'S_DATE' in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutProduit.php on line 38
+[05-Jun-2012 09:54:17] PHP Notice:  Use of undefined constant S_DUREE - assumed 'S_DUREE' in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutProduit.php on line 39
+[05-Jun-2012 09:54:49] PHP Notice:  Use of undefined constant CSS_LABEL - assumed 'CSS_LABEL' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Element/Radio.php on line 37
+[05-Jun-2012 09:54:49] PHP Fatal error:  Class 'Symbol_List' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Radio.php on line 18
+[05-Jun-2012 09:57:57] PHP Notice:  Use of undefined constant CSS_LABEL - assumed 'CSS_LABEL' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Element/Radio.php on line 29
+[05-Jun-2012 10:00:19] PHP Warning:  Exception caught by form: Plugin by name 'Input' was not found in the registry; used paths:
+Projet_Form_Decorator_: Projet/Form/Decorator/
+Zend_Form_Decorator_: Zend/Form/Decorator/
+Stack Trace:
+#0 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form/Element.php(1828): Zend_Loader_PluginLoader->load('Input')
+#1 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form/Element.php(2208): Zend_Form_Element->_getDecorator('Input', NULL)
+#2 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form/Element.php(1981): Zend_Form_Element->_loadDecorator(Array, 'Input')
+#3 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form/Element.php(2041): Zend_Form_Element->getDecorators()
+#4 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form/Decorator/FormElements.php(111): Zend_Form_Element->render()
+#5 /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php(2904): Zend_Form_Decorator_FormElements->render('')
+#6 /Users/francois/Developpement/Projets/St in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/Form.php on line 2925
+[05-Jun-2012 10:14:26] PHP Notice:  Use of undefined constant CSS_INPUT_ERROR - assumed 'CSS_INPUT_ERROR' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/ErreurPrimer.php on line 13
+[05-Jun-2012 10:14:26] PHP Notice:  Use of undefined constant CSS_INPUT_ERROR - assumed 'CSS_INPUT_ERROR' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/ErreurPrimer.php on line 13
+[05-Jun-2012 17:41:55] PHP Fatal error:  Class 'Symbol_Void' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Erreurs.php on line 22
+[05-Jun-2012 17:44:08] PHP Fatal error:  Class 'Symbol_Void' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/Erreurs.php on line 22
+[05-Jun-2012 18:33:47] PHP Fatal error:  Cannot redeclare Application_Model_Mapper_Produits::listerFraisToutUtilisateurs() in /Users/francois/Developpement/Projets/Stock/application/models/mappers/Produits.php on line 27
+[05-Jun-2012 18:33:52] PHP Fatal error:  Cannot redeclare Application_Model_Mapper_Produits::listerFraisToutUtilisateurs() in /Users/francois/Developpement/Projets/Stock/application/models/mappers/Produits.php on line 27
+[05-Jun-2012 18:33:57] PHP Fatal error:  Cannot redeclare Application_Model_Mapper_Produits::listerFraisToutUtilisateurs() in /Users/francois/Developpement/Projets/Stock/application/models/mappers/Produits.php on line 27
+[05-Jun-2012 18:34:02] PHP Fatal error:  Cannot redeclare Application_Model_Mapper_Produits::listerFraisToutUtilisateurs() in /Users/francois/Developpement/Projets/Stock/application/models/mappers/Produits.php on line 27
+[05-Jun-2012 18:34:12] PHP Fatal error:  Cannot redeclare Application_Model_Mapper_Produits::listerFraisToutUtilisateurs() in /Users/francois/Developpement/Projets/Stock/application/models/mappers/Produits.php on line 27
+[05-Jun-2012 18:38:16] PHP Fatal error:  Zend_Controller_Router_Exception: Route stock-autres is not defined in /Users/francois/Developpement/Projets/Stock/library/Zend.orig/View/Helper/Navigation/HelperAbstract.php on line 522
+[07-Jun-2012 17:03:33] PHP Fatal error:  Class 'Application_Model_Mapper_RefConservation' not found in /Users/francois/Developpement/Projets/Stock/application/modules/stock/controllers/AdministrationController.php on line 24
+[07-Jun-2012 17:06:29] PHP Fatal error:  Class 'Symbol_TableRow' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 48
+[07-Jun-2012 17:14:04] PHP Fatal error:  Class 'Symbol_Label' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 64
+[07-Jun-2012 17:15:45] PHP Notice:  Use of undefined constant CSS_LABEL_INLINE - assumed 'CSS_LABEL_INLINE' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 65
+[07-Jun-2012 17:15:45] PHP Notice:  Use of undefined constant CSS_LABEL_INLINE - assumed 'CSS_LABEL_INLINE' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 65
+[07-Jun-2012 17:16:52] PHP Notice:  Use of undefined constant CSS_LABEL_INLINE - assumed 'CSS_LABEL_INLINE' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 65
+[07-Jun-2012 17:16:52] PHP Notice:  Use of undefined constant CSS_LABEL_INLINE - assumed 'CSS_LABEL_INLINE' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 65
+[07-Jun-2012 17:16:55] PHP Notice:  Use of undefined constant CSS_LABEL_INLINE - assumed 'CSS_LABEL_INLINE' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 65
+[07-Jun-2012 17:16:55] PHP Notice:  Use of undefined constant CSS_LABEL_INLINE - assumed 'CSS_LABEL_INLINE' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/MultiCheckBox.php on line 65
+[07-Jun-2012 17:20:31] PHP Fatal error:  Class 'Application_Model_DbTable_RefConservations' not found in /Users/francois/Developpement/Projets/Stock/library/Projet/Mapper.php on line 17
+[07-Jun-2012 17:50:39] PHP Notice:  Use of undefined constant CSS_INPUT_ERROR - assumed 'CSS_INPUT_ERROR' in /Users/francois/Developpement/Projets/Stock/library/Projet/Form/Decorator/ErreurPrimer.php on line 13
+[07-Jun-2012 17:54:02] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /Users/francois/Developpement/Projets/Stock/application/modules/stock/views/scripts/axproduits/getunitebyiditem.phtml on line 3
+[07-Jun-2012 18:00:10] PHP Fatal error:  Class 'Application_Model_Mapper_Libelles' not found in /Users/francois/Developpement/Projets/Stock/application/services/Items.php on line 5
+[07-Jun-2012 18:01:30] PHP Fatal error:  Call to undefined method Application_Model_Item::getIdMesure() in /Users/francois/Developpement/Projets/Stock/library/Projet/Mapper.php on line 95
+[07-Jun-2012 18:02:51] PHP Fatal error:  Call to undefined method Application_Model_Item::getIdMesure() in /Users/francois/Developpement/Projets/Stock/library/Projet/Mapper.php on line 95
+[07-Jun-2012 18:07:36] PHP Notice:  Undefined variable: aUnites in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutItem.php on line 13
+[07-Jun-2012 18:07:36] PHP Catchable fatal error:  Argument 3 passed to Form_AjoutItem::createForm() must be an array, null given, called in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutItem.php on line 13 and defined in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutItem.php on line 17
+[07-Jun-2012 18:07:49] PHP Notice:  Undefined variable: aUnites in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutItem.php on line 13
+[07-Jun-2012 18:07:49] PHP Catchable fatal error:  Argument 3 passed to Form_AjoutItem::createForm() must be an array, null given, called in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutItem.php on line 13 and defined in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutItem.php on line 17
+[07-Jun-2012 18:50:50] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutProduit.php on line 42
+[07-Jun-2012 18:51:29] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /Users/francois/Developpement/Projets/Stock/application/modules/stock/Form/AjoutProduit.php on line 42

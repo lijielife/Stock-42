@@ -1,5 +1,6 @@
 <?php
-$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/ajoutItem.js');
+$this->headScript()->appendFile(SCRIPTS_PATH.'/forms/ajoutProduit.js');
+$this->headLink()->appendStylesheet(STYLES_PATH.'/forms/ajoutProduit.css');
 $this->placeholder('TitreHaut')->set("Ajout d'un produit");
 echo $this->form;
 if ($this->message) {

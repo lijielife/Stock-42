@@ -36,7 +36,7 @@ Grâce à Projet_Navigation_Page :
 						</frais>
 						<epicerie>
 							<label>Epicerie</label>
-							<route>stock-autres</route>
+							<route>stock-nonfrais</route>
 						</epicerie>
 					</pages>
 				</actuel>
@@ -63,7 +63,7 @@ Grâce à Projet_Navigation_Page :
 							<route>stock-admin_cat</route>
 						</ajoutcategorie>
 						<ajouterlibelle>
-							<label>Ajouter un Élement</label>
+							<label>Ajouter un Item</label>
 							<route>stock-admin_lib</route>
 						</ajouterlibelle>
 					</pages>

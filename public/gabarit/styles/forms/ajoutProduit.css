@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+label[for~=Date_Duree-] {
+	margin : 1px 5px;
+}
+
+
+#unite {
+	float		: right;
+	line-height	: 100%;
+}

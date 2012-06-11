@@ -37,8 +37,8 @@ class Projet_Form_Element_DatePicker extends ZendX_JQuery_Form_Element_DatePicke
             	$this->addDecorator('Ajax', array('tag' => $this->_ajax));
             }
             $this->addDecorator('Label')
-            	 ->addDecorator('Paragraphe')
-            	 ->addDecorator('Errors');
+            	 ->addDecorator('Paragraphe');
+            	// ->addDecorator('Errors');
         }
         return $this;
     }

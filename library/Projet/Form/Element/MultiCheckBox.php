@@ -28,6 +28,7 @@ class Projet_Form_Element_MultiCheckBox extends Zend_Form_Element_MultiCheckbox 
 
         $decorators = $this->getDecorators();
         if (empty($decorators)) {
+        	//$this->addDecorator('ViewHelper');
             $this->addDecorator('MultiCheckBox');
             if ($this->_ajax !== null) {
             	$this->addDecorator('Ajax', array('tag' => $this->_ajax));

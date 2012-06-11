@@ -16,6 +16,7 @@ class Application_Service_Constantes {
 		define('CSS_FORM_SMALL', 'small');
 		define('CSS_FORM_MEDIUM', 'medium');
 		define('CSS_FORM_LARGE', 'large');
+		define('CSS_LABEL', 'label');
 	}
 	
 	

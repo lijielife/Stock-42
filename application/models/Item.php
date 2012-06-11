@@ -1,10 +1,11 @@
 <?php
 
-class Application_Model_RefItems extends Projet_Entite {
+class Application_Model_Item extends Projet_Entite {
 
 	protected $_description = null;
 	protected $_libelle = null;
 	protected $_idCategorie = null;
+	protected $_idMesure	= null;
 	
 	public function setDescription($sDescription) {
 		$this->_description = $sDescription;
@@ -29,4 +30,14 @@ class Application_Model_RefItems extends Projet_Entite {
 	public function getIdCategorie() {
 		return $this->_idCategorie;
 	}
+	
+	public function setIdMesure($nIdMesure) {
+		$this->_idMesure = $nIdMesure;
+	}
+	
+	public function getIdMesure() {
+		return $this->_idMesure;
+	}
+	
+	
 }

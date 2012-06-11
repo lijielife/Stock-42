@@ -45,29 +45,28 @@ class Projet_Form_Decorator_MultiCheckBox extends Zend_Form_Decorator_Abstract {
 		//création de la table pour l'alignement
 		$sTable = "<table cellspacing=2px align=left id=MultiCheckBox-$sName class='MultiCheckBox'>";
 		//Creation de la première ligne pour initialisation
-		$oRow = new Symbol_TableRow();
+		$oRow = new Projet_Xml('tr');
 		//parcours des boites a cocher demandées
 		foreach ($aOptions as $iValue=>$sOption) {
 			$i++;//traitement de la ième box
 			//création de la cellule
 			$sCell = "<td>";
 			//on construit l'input (la boite à cocher), on lui met un id pour la reconnaitre
-			$oInput = new Symbol_Input($sName."[]", 'checkbox', $iValue);
-			$oInput->addAttribute('id', $sName."-".$iValue);
+			$oInput = new Projet_Xml('input',array('name'	=> $sName."[]", 
+												  'type'	=> 'checkbox', 
+												  'value'	=> $iValue,
+												  'id'		=> $sName."-".$iValue));
 			//si elle doit être cochée, on la coche
 			if ($aActive !== null && in_array($iValue, $aActive)) {
-				$oInput->addAttribute('checked', 'checked');
+				$oInput->setAttr('checked', 'checked');
 			}
 			//on construit le label
-			$oLabel = new Symbol_Label($sOption, $oInput);
-			$oLabel->addAttribute('class', CSS_LABEL_INLINE);
+			$oLabel = new Projet_Xml('label', array( 'for' => $sName."[]"), $sOption);
 			
-			//on met les deux ensemble
-			$oVoid = new Symbol_Void();
-			$oVoid->linkSymbol($oInput);
-			$oVoid->linkSymbol($oLabel);
 			//on ajoute le tout à la cellule courante
-			$sCell .= $oVoid->render()."</td>";
+			$sCell .= $oInput->render().$oLabel->render()."</td>";
+			//$oLabel->append($oInput);
+			//$sCell .= $oLabel->render();
 			/* Paramètre d'auto formattage, sauf si spécifié différement, il est true par default
 			 * si on demamde un 'boxinline' alors les éléments seront rendus en ligne, de sorte à prendre le moins de place verticalement
 			 * si on ne le demande pas, les éléments seront rendus en colone, de sorte à minimiser l'espace horizontal
@@ -78,10 +77,10 @@ class Projet_Form_Decorator_MultiCheckBox extends Zend_Form_Decorator_Abstract {
 						//si on est au nombre de colones requis, alors on pass à une autre ligne en ajoutant l'actuelle à la table
 						$oRow->addData($sCell);
 						$sTable .= $oRow->render();
-						$oRow = new Symbol_TableRow();
+						$oRow = new Projet_Xml('tr');
 					} else {
 						//sinon on ajoute une cellule
-						$oRow->addData($sCell);
+						$oRow->append($sCell);
 					}
 				} elseif (!$oElement->getInline()) {
 					if ($i % (($nBoxes % self::NUMBER_LIGNES)+1) == 0 || $nBoxes < self::NUMBER_LIGNES || $i == $nBoxes) {
@@ -90,11 +89,11 @@ class Projet_Form_Decorator_MultiCheckBox extends Zend_Form_Decorator_Abstract {
 						 * aussi le nombre de colones est-il calculé pour remplir le tableau
 						 * Le comportement est le même de précedement
 						 */
-						$oRow->addData($sCell);
+						$oRow->append($sCell);
 						$sTable .= $oRow->render();
-						$oRow = new Symbol_TableRow();
+						$oRow = new Projet_Xml('tr');
 					} else {
-						$oRow->addData($sCell);
+						$oRow->append($sCell);
 					}
 				}
 			}
@@ -103,8 +102,8 @@ class Projet_Form_Decorator_MultiCheckBox extends Zend_Form_Decorator_Abstract {
 		}
 		$sTable .= "</table>";
 		//on ajoute un span pour que les élément encapsulants soient de la bonne taille
-		$oSpan = new Symbol_Span($sTable);
-		$oSpan->setAttributes(array('style' =>'display:inline-block'));
+		$oSpan = new Projet_Xml('span', array(), $sTable);
+		$oSpan->setAttrs(array('style' =>'display:inline-block'));
 		//on renvoie le tout
 		return $sContent.$oSpan->render();
 	}

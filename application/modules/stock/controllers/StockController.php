@@ -20,7 +20,15 @@ class Stock_StockController extends Projet_Controller_Action {
 	}
 	
 	function fraisAction() {
-		
+		$oService = new Application_Service_Produit();
+		$this->view->aCols = $oService->listerCols();
+		$this->autoSetListeUrl('frais');
+	}
+	
+	function nonfraisAction() {
+		$oService = new Application_Service_Produit();
+		$this->view->aCols = $oService->listerCols();
+		$this->autoSetListeUrl('nonfrais');
 	}
 	
 	function autresAction() {

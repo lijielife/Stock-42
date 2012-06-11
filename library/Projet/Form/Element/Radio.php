@@ -11,10 +11,6 @@ class Projet_Form_Element_Radio extends Zend_Form_Element_Radio {
 			$this->_ajax = $aOptions['ajax'];
 			unset($aOptions['ajax']);
 		}
-		if (isset($aOptions['dispo_restreinte'])) {
-			$this->_dispoRestreinte = (bool) $aOptions['dispo_restreinte'];
-			unset($aOptions['dispo_restreinte']);
-		}
 		parent::__construct($spec, $aOptions);
 	}
 	
@@ -25,11 +21,9 @@ class Projet_Form_Element_Radio extends Zend_Form_Element_Radio {
 
         $decorators = $this->getDecorators();
         if (empty($decorators)) {
-            if ($this->_dispoRestreinte) {
-            	$this->addDecorator('Radio', array('dispo_restreinte' => true));
-            } else {
-            	$this->addDecorator('Radio');
-            }
+        	
+            $this->addDecorator('ViewHelper');
+            $this->addDecorator('Label');
             if ($this->_ajax !== null) {
             	$this->addDecorator('Ajax', array('tag' => $this->_ajax));
             }

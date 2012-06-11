@@ -10,10 +10,16 @@
 class Stock_AxstockController extends Projet_Controller_Action_Ajax {
 
 	function globalAction() {
-		$this->lister(new Application_Service_Produit(), 'listerTousItem');
+		$this->lister(new Application_Service_Produit(), 'listerTousTous');
 	}
 	
+	function fraisAction() {
+		$this->lister(new Application_Service_Produit(), 'listerFraisTous');
+	}
 	
+	function nonfraisAction() {
+		$this->lister(new Application_Service_Produit(), 'listerNonFraisTous');
+	}
 	
 	function getlibellesbyidcategorieAction() {
 		$oMapper = new Application_Model_Mapper_RefItems();

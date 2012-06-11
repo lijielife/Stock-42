@@ -17,6 +17,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	protected function _initConstantes() {
 		Application_Service_Constantes::css();
 	}
+	
+// 	protected function _initForceSSL() {
+// 		if($_SERVER['SERVER_PORT'] != '443') {
+// 			header('Location: https://' . $_SERVER['HTTP_HOST'] .
+// 					$_SERVER['REQUEST_URI']);
+// 			exit();
+// 		}
+// 	}
 	/**
 	 * Initialise l'environnement, la racine et la configuration.
 	 */
@@ -73,7 +81,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	 * @return void
 	 */
 	protected function _initDbAdapter() {
-		putenv('NLS_DATE_FORMAT="DD/MM/YYYY HH24:MI:SS"');
+		putenv('NLN_DATE_FORMAT="DD/MM/YYYY HH24:MI:SS"');
 		putenv('NLS_LANG=FRENCH_FRANCE.UTF8');
 
 		$this->bootstrap('db');
@@ -99,7 +107,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		}
 
 		
-//		$oDb->query("alter session set NLS_DATE_FORMAT='DD/MM/YYYY'");
+//		$oDb->query("alter session set NLN_DATE_FORMAT='DD/MM/YYYY'");
 		
 //		$nls = $oDb->fetchAll("select * from NLS_SESSION_PARAMETERS");
 //		Zend_Debug::dump($nls);exit;

@@ -20,9 +20,9 @@ class Projet_Form_Element_Select extends Zend_Form_Element_Select {
 
         $decorators = $this->getDecorators();
         if (empty($decorators)) {
-            $this->addDecorator('ErreurPrimer')
-            	->addDecorator('ViewHelper')
-            	->addDecorator('Erreurs');
+            $this//->addDecorator('ErreurPrimer')
+            	->addDecorator('ViewHelper');
+            	//->addDecorator('Erreurs');
             if ($this->_ajax !== null) {
             	$this->addDecorator('Ajax', array('tag' => $this->_ajax));
             }
