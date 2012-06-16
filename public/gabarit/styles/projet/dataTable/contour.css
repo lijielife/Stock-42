@@ -1,0 +1,250 @@
+/**	@brief Slyle CSS associé à l'objet Template_DataTables.
+ * 
+ * @category	styles
+ * @package		public_gabarit
+ * @subpackage	styles
+ * @author		cedric-1.durand
+ * @author		francois.espinet 
+ * @version		$LastChangedRevision:  $
+ */
+
+@CHARSET "UTF-8";
+
+
+/*
+#########################################
+#				TITRE					#
+#########################################
+*/
+
+h1 {
+	text-align	: center;
+}
+
+button.DTTT_button, button.ColVis_Button {
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #50a3c8 #297cb4 #083f6f !important;
+	-moz-background-size: 100% 100%;
+	background: -moz-linear-gradient(
+		top,
+		white,
+		#72c6e4 4%,
+		#0c5fa5
+	) !important;
+	-moz-border-radius: 0.333em;
+	color: white !important;
+	-moz-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+	font-size: 1.167em;
+	padding: 0.286em 1em 0.357em;
+	line-height: 1.429em !important;
+	cursor: pointer;
+	font-weight: bold !important;
+}
+
+button.DTTT_button:hover, button.ColVis_Button:hover {
+		border-color: #1eafdc #1193d5 #035592 !important;
+		background: -moz-linear-gradient(
+			top,
+			white,
+			#2bcef3 4%,
+			#057fdb
+		) !important;
+	}
+.dataTables_wrapper * {
+	vertical-align	: middle;
+}
+.dataTables_wrapper {
+	border-left				: 1px solid #083F6F;
+	border-right			: 2px solid #083F6F;
+	-moz-border-radius		: 6px
+}
+/*
+
+
+#########################################
+#				EN-TÊTE					#
+#########################################
+
+=======================================
+ Decoration des barres du dessus et du dessous 
+
+div.fg-toolbar {
+	background	 : -moz-linear-gradient(center top , #272B46, #38437E 20%, #272B46) repeat scroll 0 0 transparent;
+	display			: inline-block;
+	width			: auto;
+}
+=======================================
+ Boutons d'action						 
+
+*/
+
+div.ColVis, div.DTTT_container {
+	display			: inline;
+	float			: right;
+	padding-bottom	: 1em;
+}
+
+/* mise en forme des boutons du haut */
+button.DTTT_button, button.ColVis_Button {
+	margin			: 0.5em 1em !important;
+	padding			: 0.2em !important;
+	vertical-align	: middle;
+	width			: auto !important;
+}
+
+
+div.ColVis_collection, div.DTTT_collection {
+	/*background		: -moz-linear-gradient(center top , #8D1819, #272B46 1%, #5D5863 35%, #5D5863 48%, #5D5863 60%, #272B46 99%, #8D1819) repeat scroll 0 0 transparent !important;
+	*/
+	width				: auto !important;
+	-moz-border-radius 	: 1em;
+	margin-top			: 3px; 
+}
+
+button.ajouter span img {
+	padding-bottom		: 0.4em;
+	padding-right		: 2px;
+}
+
+/*
+======================================
+ Partie commune des zones de filtre	
+*/
+div.dataTables_length, div.dataTables_filter { 
+	padding		: 0.5em; 
+	text-align	: right; 
+	/*display	: inline*/
+}
+
+.dataTables_filter {
+	float		: left;
+}
+.dataTables_length {
+	margin-top			: 2px;
+}
+/*
+.dataTables_length select, .dataTables_filter input[type="text"] {
+	background-color: #F0EBE2;
+    -moz-border-radius: 0.417em 0.417em 0.417em 0.417em;
+    border: 1px solid #89BAD3;
+    color: #333333;
+    font-size: 1em;
+    padding: 0.417em;
+}
+
+======================================
+ Bloc de sélection : partie gauche	
+div.dataTables_length { 
+	border-right: 0; 
+	text-align	: right;
+	float		: right;
+}
+
+======================================
+ Select 								
+.dataTables_length select { 
+	background: -moz-linear-gradient(center top, #F0EBE2, #EBEBEB 0px, #F0EBE2 30px) repeat scroll 0 0%, none repeat scroll 0 0 transparent;
+}
+.dataTables_length select option { 
+	background: #D4EFFF;
+}
+
+.dataTables_length select:hover { 
+	background: -moz-linear-gradient(center top, #9CF4B0, #EBEBEB 0px, #9CF4B0 30px) repeat scroll 0 0%, none repeat scroll 0 0 transparent; cursor: pointer; }
+.dataTables_length select option:selected { 
+	background: #9CF4B0 !important;
+}
+
+======================================
+Input									
+
+.dataTables_filter input[type="text"] {
+	background: -moz-linear-gradient(center top, #F0EBE2, #EBEBEB 0px, #F0EBE2 30px) repeat scroll 0 0%, none repeat scroll 0 0 transparent;
+}
+
+
+#########################################
+#				CORPS					#
+#########################################
+
+
+table.standard span.column-sort {
+	display: none !important;
+}
+
+table.datatable td.scroll-cell {
+	display: none;
+}
+
+table.standard .scroll-cell {
+	display: visible;
+	margin: 0;
+	padding: 0;
+	width: 15px;
+}
+
+table.standard.scroll > thead tr {
+	background: -moz-linear-gradient(center top , #CCCCCC, #A4A4A4) repeat scroll 0 0 transparent !important;
+    border-color: white #999999 #828282 #DDDDDD !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.698) !important;
+}
+
+table.standard.scroll tbody {
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-right: 5px;
+	height: 240px;	
+}
+
+table.scroll.standard > tfoot tr {
+	background: -moz-linear-gradient(center top , #333333, #999999) repeat scroll 0 0 transparent !important;
+    border-top: 1px solid #FF9900 !important;
+    color: white !important;
+}
+
+
+
+#########################################
+#				PIED					#
+#########################################
+*/
+
+/*
+======================================
+ Zone d'information sur le résultat	
+*/
+div.dataTables_info {
+    line-height			: 25px;
+	text-align			: center;
+	margin-left			: 1em;
+	float				: left;
+	margin-top			: 2px
+}
+/*
+======================================
+ Zone de pagination					
+*/
+.dataTables_paginate {
+	z-index			: 10;
+	padding-bottom	: 7px;
+}
+
+.fg-button {
+	margin	: 1px 2px 0 2px !important;
+	padding	: 2px;
+	-moz-border-radius	: 0.3em;
+}
+
+.fg-button.ui-state-disabled {
+	opacity	: 0.5;
+}
+
+table#datatable > tbody > tr:HOVER > td {
+	background-color	: #C6D9EF;
+}
